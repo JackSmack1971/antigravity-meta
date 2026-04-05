@@ -141,10 +141,10 @@ You’ll see the entire hybrid system in action: skills → GSD planning → rul
 
 ## 🤝 Credits & Community
 
-- **Awesome-Skills Pack** → Community-driven (1,400+ skills)
-- **GSD (Get Shit Done)** → Atomic anti-vibe-coding framework
-- **BMAD Method** → Full Agile AI squad simulation
-- **Antigravity Native** → Google’s official Agent Skills system
+- 🚀 **[Awesome-Skills Pack](https://github.com/sickn33/antigravity-awesome-skills)** — 1,340+ reusable agentic skills with official Antigravity installer.
+- ⚡ **[GSD (Get Shit Done)](https://github.com/toonight/get-shit-done-for-antigravity)** — Atomic anti-vibe-coding workflow optimized for Antigravity.
+- 👥 **[BMAD Method](https://github.com/bmad-code-org/BMAD-METHOD)** — Full Agile AI squad simulation with slash-command workflows.
+- 🌐 **[Antigravity Native](https://antigravity.google/docs/skills)** — Google’s official Agent Skills system and `.agents/` architecture.
 
 This setup is the current meta for Antigravity power users in 2026.
 
