@@ -29,6 +29,7 @@ You get **maximum speed** (skills) + **maximum discipline** (GSD) + **maximum st
 
 ## 📁 Folder Structure (Clean & Unified)
 
+```text
 .
 ├── .agents/                  ← Single source of truth (everything merged here)
 │   ├── skills/               ← Awesome-Skills Pack + GSD skills (1,400+)
@@ -43,6 +44,7 @@ You get **maximum speed** (skills) + **maximum discipline** (GSD) + **maximum st
 ├── hybrid-backup-before-*.zip ← Automatic safety backups (keep or delete)
 ├── task.md                   ← Current task tracking (GSD)
 └── README.md                 ← You are here
+```
 
 ## 📚 Documentation Hub
 
