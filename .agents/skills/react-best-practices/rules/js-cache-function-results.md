@@ -4,6 +4,8 @@ impact: MEDIUM
 impactDescription: avoid redundant computation
 tags: javascript, cache, memoization, performance
 ---
+
+
 
 ## Cache Repeated Function Calls
 
@@ -24,7 +26,7 @@ function ProjectList({ projects }: { projects: Project[] }) {
     </div>
   )
 }
-```
+```	ext
 
 **Correct (cached results):**
 
@@ -53,7 +55,7 @@ function ProjectList({ projects }: { projects: Project[] }) {
     </div>
   )
 }
-```
+```	ext
 
 **Simpler pattern for single-value functions:**
 
@@ -73,8 +75,10 @@ function isLoggedIn(): boolean {
 function onAuthChange() {
   isLoggedInCache = null
 }
-```
+```	ext
 
 Use a Map (not a hook) so it works everywhere: utilities, event handlers, not just React components.
 
 Reference: [How we made the Vercel Dashboard twice as fast](https://vercel.com/blog/how-we-made-the-vercel-dashboard-twice-as-fast)
+
+

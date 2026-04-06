@@ -4,6 +4,8 @@ impact: CRITICAL
 impactDescription: 2-10× improvement
 tags: async, parallelization, dependencies, better-all
 ---
+
+
 
 ## Dependency-Based Parallelization
 
@@ -17,7 +19,7 @@ const [user, config] = await Promise.all([
   fetchConfig()
 ])
 const profile = await fetchProfile(user.id)
-```
+```	ext
 
 **Correct (config and profile run in parallel):**
 
@@ -31,6 +33,8 @@ const { user, config, profile } = await all({
     return fetchProfile((await this.$.user).id)
   }
 })
-```
+```	ext
 
 Reference: [https://github.com/shuding/better-all](https://github.com/shuding/better-all)
+
+

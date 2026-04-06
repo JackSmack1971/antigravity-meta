@@ -4,6 +4,8 @@ impact: MEDIUM
 impactDescription: preserves state/DOM
 tags: rendering, activity, visibility, state-preservation
 ---
+
+
 
 ## Use Activity Component for Show/Hide
 
@@ -21,6 +23,8 @@ function Dropdown({ isOpen }: Props) {
     </Activity>
   )
 }
-```
+```	ext
 
 Avoids expensive re-renders and state loss.
+
+

@@ -4,6 +4,8 @@ impact: LOW
 impactDescription: O(n) instead of O(n log n)
 tags: javascript, arrays, performance, sorting, algorithms
 ---
+
+
 
 ## Use Loop for Min/Max Instead of Sort
 
@@ -22,7 +24,7 @@ function getLatestProject(projects: Project[]) {
   const sorted = [...projects].sort((a, b) => b.updatedAt - a.updatedAt)
   return sorted[0]
 }
-```
+```	ext
 
 Sorts the entire array just to find the maximum value.
 
@@ -33,7 +35,7 @@ function getOldestAndNewest(projects: Project[]) {
   const sorted = [...projects].sort((a, b) => a.updatedAt - b.updatedAt)
   return { oldest: sorted[0], newest: sorted[sorted.length - 1] }
 }
-```
+```	ext
 
 Still sorts unnecessarily when only min/max are needed.
 
@@ -67,7 +69,7 @@ function getOldestAndNewest(projects: Project[]) {
   
   return { oldest, newest }
 }
-```
+```	ext
 
 Single pass through the array, no copying, no sorting.
 
@@ -77,6 +79,8 @@ Single pass through the array, no copying, no sorting.
 const numbers = [5, 2, 8, 1, 9]
 const min = Math.min(...numbers)
 const max = Math.max(...numbers)
-```
+```	ext
 
 This works for small arrays but can be slower for very large arrays due to spread operator limitations. Use the loop approach for reliability.
+
+

@@ -4,6 +4,8 @@ impact: MEDIUM
 impactDescription: maintains UI responsiveness
 tags: rerender, transitions, startTransition, performance
 ---
+
+
 
 ## Use Transitions for Non-Urgent Updates
 
@@ -20,7 +22,7 @@ function ScrollTracker() {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 }
-```
+```	ext
 
 **Correct (non-blocking updates):**
 
@@ -37,4 +39,6 @@ function ScrollTracker() {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 }
-```
+```	ext
+
+

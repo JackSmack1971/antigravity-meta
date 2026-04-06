@@ -4,6 +4,8 @@ impact: CRITICAL
 impactDescription: directly affects TTI and LCP
 tags: bundle, dynamic-import, code-splitting, next-dynamic
 ---
+
+
 
 ## Dynamic Imports for Heavy Components
 
@@ -17,7 +19,7 @@ import { MonacoEditor } from './monaco-editor'
 function CodePanel({ code }: { code: string }) {
   return <MonacoEditor value={code} />
 }
-```
+```	ext
 
 **Correct (Monaco loads on demand):**
 
@@ -32,4 +34,6 @@ const MonacoEditor = dynamic(
 function CodePanel({ code }: { code: string }) {
   return <MonacoEditor value={code} />
 }
-```
+```	ext
+
+

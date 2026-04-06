@@ -4,6 +4,8 @@ impact: CRITICAL
 impactDescription: eliminates server-side waterfalls
 tags: server, rsc, parallel-fetching, composition
 ---
+
+
 
 ## Parallel Data Fetching with Component Composition
 
@@ -26,7 +28,7 @@ async function Sidebar() {
   const items = await fetchSidebarItems()
   return <nav>{items.map(renderItem)}</nav>
 }
-```
+```	ext
 
 **Correct (both fetch simultaneously):**
 
@@ -49,7 +51,7 @@ export default function Page() {
     </div>
   )
 }
-```
+```	ext
 
 **Alternative with children prop:**
 
@@ -76,4 +78,6 @@ export default function Page() {
     </Layout>
   )
 }
-```
+```	ext
+
+

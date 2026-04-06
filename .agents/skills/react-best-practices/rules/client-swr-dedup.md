@@ -4,6 +4,8 @@ impact: MEDIUM-HIGH
 impactDescription: automatic deduplication
 tags: client, swr, deduplication, data-fetching
 ---
+
+
 
 ## Use SWR for Automatic Deduplication
 
@@ -20,7 +22,7 @@ function UserList() {
       .then(setUsers)
   }, [])
 }
-```
+```	ext
 
 **Correct (multiple instances share one request):**
 
@@ -30,7 +32,7 @@ import useSWR from 'swr'
 function UserList() {
   const { data: users } = useSWR('/api/users', fetcher)
 }
-```
+```	ext
 
 **For immutable data:**
 
@@ -40,7 +42,7 @@ import { useImmutableSWR } from '@/lib/swr'
 function StaticContent() {
   const { data } = useImmutableSWR('/api/config', fetcher)
 }
-```
+```	ext
 
 **For mutations:**
 
@@ -51,6 +53,8 @@ function UpdateButton() {
   const { trigger } = useSWRMutation('/api/user', updateUser)
   return <button onClick={() => trigger()}>Update</button>
 }
-```
+```	ext
 
 Reference: [https://swr.vercel.app](https://swr.vercel.app)
+
+

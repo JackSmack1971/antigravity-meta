@@ -1,3 +1,6 @@
+---
+description: "Detailed instructions for executing exhaustive deep-dive documentation of specific project areas, including file-by-file analysis and dependency mapping."
+---
 # Deep-Dive Documentation Instructions
 
 <workflow>

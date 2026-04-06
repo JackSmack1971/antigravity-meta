@@ -4,6 +4,8 @@ impact: MEDIUM-HIGH
 impactDescription: prevents mutation bugs in React state
 tags: javascript, arrays, immutability, react, state, mutation
 ---
+
+
 
 ## Use toSorted() Instead of sort() for Immutability
 
@@ -20,7 +22,7 @@ function UserList({ users }: { users: User[] }) {
   )
   return <div>{sorted.map(renderUser)}</div>
 }
-```
+```	ext
 
 **Correct (creates new array):**
 
@@ -33,11 +35,15 @@ function UserList({ users }: { users: User[] }) {
   )
   return <div>{sorted.map(renderUser)}</div>
 }
-```
+```	ext
 
 **Why this matters in React:**
+
+
 
 1. Props/state mutations break React's immutability model - React expects props and state to be treated as read-only
+
+
 2. Causes stale closure bugs - Mutating arrays inside closures (callbacks, effects) can lead to unexpected behavior
 
 **Browser support (fallback for older browsers):**
@@ -47,11 +53,17 @@ function UserList({ users }: { users: User[] }) {
 ```typescript
 // Fallback for older browsers
 const sorted = [...items].sort((a, b) => a.value - b.value)
-```
+```	ext
 
 **Other immutable array methods:**
+
 
 - `.toSorted()` - immutable sort
+
 - `.toReversed()` - immutable reverse
+
 - `.toSpliced()` - immutable splice
+
 - `.with()` - immutable element replacement
+
+

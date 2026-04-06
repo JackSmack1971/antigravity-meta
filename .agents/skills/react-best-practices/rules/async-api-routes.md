@@ -4,6 +4,8 @@ impact: CRITICAL
 impactDescription: 2-10× improvement
 tags: api-routes, server-actions, waterfalls, parallelization
 ---
+
+
 
 ## Prevent Waterfall Chains in API Routes
 
@@ -18,7 +20,7 @@ export async function GET(request: Request) {
   const data = await fetchData(session.user.id)
   return Response.json({ data, config })
 }
-```
+```	ext
 
 **Correct (auth and config start immediately):**
 
@@ -33,6 +35,8 @@ export async function GET(request: Request) {
   ])
   return Response.json({ data, config })
 }
-```
+```	ext
 
 For operations with more complex dependency chains, use `better-all` to automatically maximize parallelism (see Dependency-Based Parallelization).
+
+

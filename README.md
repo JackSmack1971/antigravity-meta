@@ -102,6 +102,19 @@ Task: [describe what you want]
 
 ```
 
+## 🚀 One-Click Installation (v2)
+
+To bootstrap the complete Antigravity Meta v2 architecture (including the unified Architect skill, Self-Audit workflow, and Blackboard state), run:
+
+```bash
+npx antigravity-meta-architect@v2 init
+```
+
+Alternatively, if you already have the repository, just trigger the built-in audit workflow from your IDE:
+`/self-audit`
+
+---
+
 ## 🔄 Updating & Maintenance
 
 ```bash

@@ -4,6 +4,8 @@ impact: HIGH
 impactDescription: faster initial paint
 tags: async, suspense, streaming, layout-shift
 ---
+
+
 
 ## Strategic Suspense Boundaries
 
@@ -26,7 +28,7 @@ async function Page() {
     </div>
   )
 }
-```
+```	ext
 
 The entire layout waits for data even though only the middle section needs it.
 
@@ -52,7 +54,7 @@ async function DataDisplay() {
   const data = await fetchData() // Only blocks this component
   return <div>{data.content}</div>
 }
-```
+```	ext
 
 Sidebar, Header, and Footer render immediately. Only DataDisplay waits for data.
 
@@ -85,15 +87,21 @@ function DataSummary({ dataPromise }: { dataPromise: Promise<Data> }) {
   const data = use(dataPromise) // Reuses the same promise
   return <div>{data.summary}</div>
 }
-```
+```	ext
 
 Both components share the same promise, so only one fetch occurs. Layout renders immediately while both components wait together.
 
 **When NOT to use this pattern:**
+
 
 - Critical data needed for layout decisions (affects positioning)
+
 - SEO-critical content above the fold
+
 - Small, fast queries where suspense overhead isn't worth it
+
 - When you want to avoid layout shift (loading → content jump)
 
 **Trade-off:** Faster initial paint vs potential layout shift. Choose based on your UX priorities.
+
+

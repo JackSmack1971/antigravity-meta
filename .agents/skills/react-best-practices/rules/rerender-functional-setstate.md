@@ -4,6 +4,8 @@ impact: MEDIUM
 impactDescription: prevents stale closures and unnecessary callback recreations
 tags: react, hooks, useState, useCallback, callbacks, closures
 ---
+
+
 
 ## Use Functional setState Updates
 
@@ -27,7 +29,7 @@ function TodoList() {
   
   return <ItemsEditor items={items} onAdd={addItems} onRemove={removeItem} />
 }
-```
+```	ext
 
 The first callback is recreated every time `items` changes, which can cause child components to re-render unnecessarily. The second callback has a stale closure bug—it will always reference the initial `items` value.
 
@@ -49,26 +51,43 @@ function TodoList() {
   
   return <ItemsEditor items={items} onAdd={addItems} onRemove={removeItem} />
 }
-```
+```	ext
 
 **Benefits:**
+
+
 
 1. **Stable callback references** - Callbacks don't need to be recreated when state changes
+
+
 2. **No stale closures** - Always operates on the latest state value
+
+
 3. **Fewer dependencies** - Simplifies dependency arrays and reduces memory leaks
+
+
 4. **Prevents bugs** - Eliminates the most common source of React closure bugs
 
 **When to use functional updates:**
+
 
 - Any setState that depends on the current state value
+
 - Inside useCallback/useMemo when state is needed
+
 - Event handlers that reference state
+
 - Async operations that update state
 
 **When direct updates are fine:**
+
 
-- Setting state to a static value: `setCount(0)`
-- Setting state from props/arguments only: `setName(newName)`
+- Setting state to a static value: `setCount(0)`	ext
+
+- Setting state from props/arguments only: `setName(newName)`	ext
+
 - State doesn't depend on previous value
 
 **Note:** If your project has [React Compiler](https://react.dev/learn/react-compiler) enabled, the compiler can automatically optimize some cases, but functional updates are still recommended for correctness and to prevent stale closure bugs.
+
+

@@ -4,6 +4,8 @@ impact: HIGH
 impactDescription: avoids blocking unused code paths
 tags: async, await, conditional, optimization
 ---
+
+
 
 ## Defer Await Until Needed
 
@@ -23,7 +25,7 @@ async function handleRequest(userId: string, skipProcessing: boolean) {
   // Only this branch uses userData
   return processUserData(userData)
 }
-```
+```	ext
 
 **Correct (only blocks when needed):**
 
@@ -38,7 +40,7 @@ async function handleRequest(userId: string, skipProcessing: boolean) {
   const userData = await fetchUserData(userId)
   return processUserData(userData)
 }
-```
+```	ext
 
 **Another example (early return optimization):**
 
@@ -75,6 +77,8 @@ async function updateResource(resourceId: string, userId: string) {
   
   return await updateResourceData(resource, permissions)
 }
-```
+```	ext
 
 This optimization is especially valuable when the skipped branch is frequently taken, or when the deferred operation is expensive.
+
+

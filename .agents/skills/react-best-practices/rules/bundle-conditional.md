@@ -4,6 +4,8 @@ impact: HIGH
 impactDescription: loads large data only when needed
 tags: bundle, conditional-loading, lazy-loading
 ---
+
+
 
 ## Conditional Module Loading
 
@@ -26,6 +28,8 @@ function AnimationPlayer({ enabled }: { enabled: boolean }) {
   if (!frames) return <Skeleton />
   return <Canvas frames={frames} />
 }
-```
+```	ext
 
 The `typeof window !== 'undefined'` check prevents bundling this module for SSR, optimizing server bundle size and build speed.
+
+

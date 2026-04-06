@@ -4,6 +4,8 @@ impact: MEDIUM
 impactDescription: avoids visual flicker and hydration errors
 tags: rendering, ssr, hydration, localStorage, flicker
 ---
+
+
 
 ## Prevent Hydration Mismatch Without Flickering
 
@@ -22,7 +24,7 @@ function ThemeWrapper({ children }: { children: ReactNode }) {
     </div>
   )
 }
-```
+```	ext
 
 Server-side rendering will fail because `localStorage` is undefined.
 
@@ -46,7 +48,7 @@ function ThemeWrapper({ children }: { children: ReactNode }) {
     </div>
   )
 }
-```
+```	ext
 
 Component first renders with default value (`light`), then updates after hydration, causing a visible flash of incorrect content.
 
@@ -61,7 +63,7 @@ function ThemeWrapper({ children }: { children: ReactNode }) {
       </div>
       <script
         dangerouslySetInnerHTML={{
-          __html: `
+          __html: `	ext
             (function() {
               try {
                 var theme = localStorage.getItem('theme') || 'light';
@@ -75,8 +77,10 @@ function ThemeWrapper({ children }: { children: ReactNode }) {
     </>
   )
 }
-```
+```	ext
 
 The inline script executes synchronously before showing the element, ensuring the DOM already has the correct value. No flickering, no hydration mismatch.
 
 This pattern is especially useful for theme toggles, user preferences, authentication states, and any client-only data that should render immediately without flashing default values.
+
+

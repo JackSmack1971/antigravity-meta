@@ -4,6 +4,8 @@ impact: LOW-MEDIUM
 impactDescription: avoids unnecessary computation
 tags: javascript, functions, optimization, early-return
 ---
+
+
 
 ## Early Return from Functions
 
@@ -30,7 +32,7 @@ function validateUsers(users: User[]) {
   
   return hasError ? { valid: false, error: errorMessage } : { valid: true }
 }
-```
+```	ext
 
 **Correct (returns immediately on first error):**
 
@@ -47,4 +49,6 @@ function validateUsers(users: User[]) {
 
   return { valid: true }
 }
-```
+```	ext
+
+

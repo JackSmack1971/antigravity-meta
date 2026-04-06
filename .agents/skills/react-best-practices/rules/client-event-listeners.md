@@ -4,6 +4,8 @@ impact: LOW
 impactDescription: single listener for N components
 tags: client, swr, event-listeners, subscription
 ---
+
+
 
 ## Deduplicate Global Event Listeners
 
@@ -23,7 +25,7 @@ function useKeyboardShortcut(key: string, callback: () => void) {
     return () => window.removeEventListener('keydown', handler)
   }, [key, callback])
 }
-```
+```	ext
 
 When using the `useKeyboardShortcut` hook multiple times, each instance will register a new listener.
 
@@ -71,4 +73,6 @@ function Profile() {
   useKeyboardShortcut('k', () => { /* ... */ })
   // ...
 }
-```
+```	ext
+
+

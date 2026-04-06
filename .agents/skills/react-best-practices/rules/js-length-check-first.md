@@ -4,6 +4,8 @@ impact: MEDIUM-HIGH
 impactDescription: avoids expensive operations when lengths differ
 tags: javascript, arrays, performance, optimization, comparison
 ---
+
+
 
 ## Early Length Check for Array Comparisons
 
@@ -18,7 +20,7 @@ function hasChanges(current: string[], original: string[]) {
   // Always sorts and joins, even when lengths differ
   return current.sort().join() !== original.sort().join()
 }
-```
+```	ext
 
 Two O(n log n) sorts run even when `current.length` is 5 and `original.length` is 100. There is also overhead of joining the arrays and comparing the strings.
 
@@ -40,10 +42,16 @@ function hasChanges(current: string[], original: string[]) {
   }
   return false
 }
-```
+```	ext
 
 This new approach is more efficient because:
+
 - It avoids the overhead of sorting and joining the arrays when lengths differ
+
 - It avoids consuming memory for the joined strings (especially important for large arrays)
+
 - It avoids mutating the original arrays
+
 - It returns early when a difference is found
+
+

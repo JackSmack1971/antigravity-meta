@@ -4,6 +4,8 @@ impact: CRITICAL
 impactDescription: 200-800ms import cost, slow builds
 tags: bundle, imports, tree-shaking, barrel-files, performance
 ---
+
+
 
 ## Avoid Barrel File Imports
 
@@ -22,7 +24,7 @@ import { Check, X, Menu } from 'lucide-react'
 
 import { Button, TextField } from '@mui/material'
 // Loads 2,225 modules, takes ~4.2s extra in dev
-```
+```	ext
 
 **Correct (imports only what you need):**
 
@@ -35,7 +37,7 @@ import Menu from 'lucide-react/dist/esm/icons/menu'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 // Loads only what you use
-```
+```	ext
 
 **Alternative (Next.js 13.5+):**
 
@@ -50,10 +52,12 @@ module.exports = {
 // Then you can keep the ergonomic barrel imports:
 import { Check, X, Menu } from 'lucide-react'
 // Automatically transformed to direct imports at build time
-```
+```	ext
 
 Direct imports provide 15-70% faster dev boot, 28% faster builds, 40% faster cold starts, and significantly faster HMR.
 
 Libraries commonly affected: `lucide-react`, `@mui/material`, `@mui/icons-material`, `@tabler/icons-react`, `react-icons`, `@headlessui/react`, `@radix-ui/react-*`, `lodash`, `ramda`, `date-fns`, `rxjs`, `react-use`.
 
 Reference: [How we optimized package imports in Next.js](https://vercel.com/blog/how-we-optimized-package-imports-in-next-js)
+
+

@@ -4,6 +4,8 @@ impact: MEDIUM
 impactDescription: Optional description of impact (e.g., "20-50% improvement")
 tags: tag1, tag2
 ---
+
+
 
 ## Rule Title Here
 
@@ -16,13 +18,15 @@ Brief explanation of the rule and why it matters. This should be clear and conci
 ```typescript
 // Bad code example here
 const bad = example()
-```
+```	ext
 
 **Correct (description of what's right):**
 
 ```typescript
 // Good code example here
 const good = example()
-```
+```	ext
 
 Reference: [Link to documentation or resource](https://example.com)
+
+

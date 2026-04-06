@@ -4,6 +4,8 @@ impact: LOW
 impactDescription: prevents rendering 0 or NaN
 tags: rendering, conditional, jsx, falsy-values
 ---
+
+
 
 ## Use Explicit Conditional Rendering
 
@@ -22,7 +24,7 @@ function Badge({ count }: { count: number }) {
 
 // When count = 0, renders: <div>0</div>
 // When count = 5, renders: <div><span class="badge">5</span></div>
-```
+```	ext
 
 **Correct (renders nothing when count is 0):**
 
@@ -37,4 +39,6 @@ function Badge({ count }: { count: number }) {
 
 // When count = 0, renders: <div></div>
 // When count = 5, renders: <div><span class="badge">5</span></div>
-```
+```	ext
+
+

@@ -1,3 +1,6 @@
+---
+description: "Exhaustive deep-dive documentation of specific project areas, requiring full-file review and literal analysis."
+---
 # Deep-Dive Documentation Sub-Workflow
 
 **Goal:** Exhaustive deep-dive documentation of specific project areas.

@@ -4,6 +4,8 @@ impact: CRITICAL
 impactDescription: 2-10× improvement
 tags: async, parallelization, promises, waterfalls
 ---
+
+
 
 ## Promise.all() for Independent Operations
 
@@ -15,7 +17,7 @@ When async operations have no interdependencies, execute them concurrently using
 const user = await fetchUser()
 const posts = await fetchPosts()
 const comments = await fetchComments()
-```
+```	ext
 
 **Correct (parallel execution, 1 round trip):**
 
@@ -25,4 +27,6 @@ const [user, posts, comments] = await Promise.all([
   fetchPosts(),
   fetchComments()
 ])
-```
+```	ext
+
+

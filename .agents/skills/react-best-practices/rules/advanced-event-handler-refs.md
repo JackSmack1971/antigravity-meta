@@ -4,6 +4,8 @@ impact: LOW
 impactDescription: stable subscriptions
 tags: advanced, hooks, refs, event-handlers, optimization
 ---
+
+
 
 ## Store Event Handlers in Refs
 
@@ -18,7 +20,7 @@ function useWindowEvent(event: string, handler: () => void) {
     return () => window.removeEventListener(event, handler)
   }, [event, handler])
 }
-```
+```	ext
 
 **Correct (stable subscription):**
 
@@ -35,7 +37,7 @@ function useWindowEvent(event: string, handler: () => void) {
     return () => window.removeEventListener(event, listener)
   }, [event])
 }
-```
+```	ext
 
 **Alternative: use `useEffectEvent` if you're on latest React:**
 
@@ -50,6 +52,8 @@ function useWindowEvent(event: string, handler: () => void) {
     return () => window.removeEventListener(event, onEvent)
   }, [event])
 }
-```
+```	ext
 
 `useEffectEvent` provides a cleaner API for the same pattern: it creates a stable function reference that always calls the latest version of the handler.
+
+

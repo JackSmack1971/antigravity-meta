@@ -4,6 +4,8 @@ impact: MEDIUM
 impactDescription: loads after hydration
 tags: bundle, third-party, analytics, defer
 ---
+
+
 
 ## Defer Non-Critical Third-Party Libraries
 
@@ -24,7 +26,7 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
-```
+```	ext
 
 **Correct (loads after hydration):**
 
@@ -46,4 +48,6 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
-```
+```	ext
+
+

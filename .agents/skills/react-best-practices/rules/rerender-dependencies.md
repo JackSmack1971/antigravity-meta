@@ -4,6 +4,8 @@ impact: LOW
 impactDescription: minimizes effect re-runs
 tags: rerender, useEffect, dependencies, optimization
 ---
+
+
 
 ## Narrow Effect Dependencies
 
@@ -15,7 +17,7 @@ Specify primitive dependencies instead of objects to minimize effect re-runs.
 useEffect(() => {
   console.log(user.id)
 }, [user])
-```
+```	ext
 
 **Correct (re-runs only when id changes):**
 
@@ -23,7 +25,7 @@ useEffect(() => {
 useEffect(() => {
   console.log(user.id)
 }, [user.id])
-```
+```	ext
 
 **For derived state, compute outside effect:**
 
@@ -42,4 +44,6 @@ useEffect(() => {
     enableMobileMode()
   }
 }, [isMobile])
-```
+```	ext
+
+

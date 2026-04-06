@@ -4,6 +4,8 @@ impact: MEDIUM
 impactDescription: reduces perceived latency
 tags: bundle, preload, user-intent, hover
 ---
+
+
 
 ## Preload Based on User Intent
 
@@ -29,7 +31,7 @@ function EditorButton({ onClick }: { onClick: () => void }) {
     </button>
   )
 }
-```
+```	ext
 
 **Example (preload when feature flag is enabled):**
 
@@ -45,6 +47,8 @@ function FlagsProvider({ children, flags }: Props) {
     {children}
   </FlagsContext.Provider>
 }
-```
+```	ext
 
 The `typeof window !== 'undefined'` check prevents bundling preloaded modules for SSR, optimizing server bundle size and build speed.
+
+

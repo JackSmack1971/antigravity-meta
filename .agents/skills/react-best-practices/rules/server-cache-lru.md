@@ -4,6 +4,8 @@ impact: HIGH
 impactDescription: caches across requests
 tags: server, cache, lru, cross-request
 ---
+
+
 
 ## Cross-Request LRU Caching
 
@@ -30,7 +32,7 @@ export async function getUser(id: string) {
 
 // Request 1: DB query, result cached
 // Request 2: cache hit, no DB query
-```
+```	ext
 
 Use when sequential user actions hit multiple endpoints needing the same data within seconds.
 
@@ -39,3 +41,5 @@ Use when sequential user actions hit multiple endpoints needing the same data wi
 **In traditional serverless:** Each invocation runs in isolation, so consider Redis for cross-process caching.
 
 Reference: [https://github.com/isaacs/node-lru-cache](https://github.com/isaacs/node-lru-cache)
+
+

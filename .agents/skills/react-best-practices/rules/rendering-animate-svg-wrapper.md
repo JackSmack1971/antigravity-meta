@@ -4,6 +4,8 @@ impact: LOW
 impactDescription: enables hardware acceleration
 tags: rendering, svg, css, animation, performance
 ---
+
+
 
 ## Animate SVG Wrapper Instead of SVG Element
 
@@ -24,7 +26,7 @@ function LoadingSpinner() {
     </svg>
   )
 }
-```
+```	ext
 
 **Correct (animating wrapper div - hardware accelerated):**
 
@@ -42,6 +44,8 @@ function LoadingSpinner() {
     </div>
   )
 }
-```
+```	ext
 
 This applies to all CSS transforms and transitions (`transform`, `opacity`, `translate`, `scale`, `rotate`). The wrapper div allows browsers to use GPU acceleration for smoother animations.
+
+

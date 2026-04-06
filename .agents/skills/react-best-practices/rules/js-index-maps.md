@@ -4,6 +4,8 @@ impact: LOW-MEDIUM
 impactDescription: 1M ops to 2K ops
 tags: javascript, map, indexing, optimization, performance
 ---
+
+
 
 ## Build Index Maps for Repeated Lookups
 
@@ -18,7 +20,7 @@ function processOrders(orders: Order[], users: User[]) {
     user: users.find(u => u.id === order.userId)
   }))
 }
-```
+```	ext
 
 **Correct (O(1) per lookup):**
 
@@ -31,7 +33,9 @@ function processOrders(orders: Order[], users: User[]) {
     user: userById.get(order.userId)
   }))
 }
-```
+```	ext
 
 Build map once (O(n)), then all lookups are O(1).
 For 1000 orders × 1000 users: 1M ops → 2K ops.
+
+

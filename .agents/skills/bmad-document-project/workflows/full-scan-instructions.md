@@ -1,3 +1,6 @@
+---
+description: "Comprehensive instruction set for executing full project scans, ranging from quick pattern-based analysis to exhaustive source code documentation."
+---
 # Full Project Scan Instructions
 
 <workflow>

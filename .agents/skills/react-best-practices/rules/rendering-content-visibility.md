@@ -4,6 +4,8 @@ impact: HIGH
 impactDescription: faster initial render
 tags: rendering, css, content-visibility, long-lists
 ---
+
+
 
 ## CSS content-visibility for Long Lists
 
@@ -16,7 +18,7 @@ Apply `content-visibility: auto` to defer off-screen rendering.
   content-visibility: auto;
   contain-intrinsic-size: 0 80px;
 }
-```
+```	ext
 
 **Example:**
 
@@ -33,6 +35,8 @@ function MessageList({ messages }: { messages: Message[] }) {
     </div>
   )
 }
-```
+```	ext
 
 For 1000 messages, browser skips layout/paint for ~990 off-screen items (10× faster initial render).
+
+

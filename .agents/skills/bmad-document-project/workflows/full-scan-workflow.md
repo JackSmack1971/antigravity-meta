@@ -1,3 +1,6 @@
+---
+description: "Primary workflow for complete project documentation, supporting initial scans, full rescans, and intelligent project type detection."
+---
 # Full Project Scan Sub-Workflow
 
 **Goal:** Complete project documentation (initial scan or full rescan).

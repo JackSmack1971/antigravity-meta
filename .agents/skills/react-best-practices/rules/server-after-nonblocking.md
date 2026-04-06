@@ -4,6 +4,8 @@ impact: MEDIUM
 impactDescription: faster response times
 tags: server, async, logging, analytics, side-effects
 ---
+
+
 
 ## Use after() for Non-Blocking Operations
 
@@ -27,7 +29,7 @@ export async function POST(request: Request) {
     headers: { 'Content-Type': 'application/json' }
   })
 }
-```
+```	ext
 
 **Correct (non-blocking):**
 
@@ -53,21 +55,30 @@ export async function POST(request: Request) {
     headers: { 'Content-Type': 'application/json' }
   })
 }
-```
+```	ext
 
 The response is sent immediately while logging happens in the background.
 
 **Common use cases:**
+
 
 - Analytics tracking
+
 - Audit logging
+
 - Sending notifications
+
 - Cache invalidation
+
 - Cleanup tasks
 
 **Important notes:**
+
 
 - `after()` runs even if the response fails or redirects
+
 - Works in Server Actions, Route Handlers, and Server Components
 
 Reference: [https://nextjs.org/docs/app/api-reference/functions/after](https://nextjs.org/docs/app/api-reference/functions/after)
+
+

@@ -11,7 +11,9 @@ date_added: "2026-02-27"
 Comprehensive performance optimization guide for React and Next.js applications, maintained by Vercel. Contains 45 rules across 8 categories, prioritized by impact to guide automated refactoring and code generation.
 
 ## When to Use
+
 Reference these guidelines when:
+
 - Writing new React components or Next.js pages
 - Implementing data fetching (client or server-side)
 - Reviewing code for performance issues
@@ -21,7 +23,7 @@ Reference these guidelines when:
 ## Rule Categories by Priority
 
 | Priority | Category | Impact | Prefix |
-|----------|----------|--------|--------|
+| :--- | :--- | :--- | :--- |
 | 1 | Eliminating Waterfalls | CRITICAL | `async-` |
 | 2 | Bundle Size Optimization | CRITICAL | `bundle-` |
 | 3 | Server-Side Performance | HIGH | `server-` |
@@ -106,21 +108,24 @@ Reference these guidelines when:
 
 Read individual rule files for detailed explanations and code examples:
 
-```
+```text
 rules/async-parallel.md
 rules/bundle-barrel-imports.md
 rules/_sections.md
 ```
 
 Each rule file contains:
+
 - Brief explanation of why it matters
 - Incorrect code example with explanation
 - Correct code example with explanation
 - Additional context and references
 
-## Full Compiled Document
+## Categorized Deep Dives
 
-For the complete guide with all rules expanded: `AGENTS.md`
+For grouped knowledge by category:
 
-## When to Use
-This skill is applicable to execute the workflow or actions described in the overview.
+- [Waterfalls & Data Fetching](./resources/waterfalls-and-data.md)
+- [Bundle & Rendering Performance](./resources/bundle-and-rendering.md)
+- [Re-render & State Optimization](./resources/re-render-and-state.md)
+- [JavaScript & Advanced Patterns](./resources/javascript-and-patterns.md)

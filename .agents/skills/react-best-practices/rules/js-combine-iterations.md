@@ -4,6 +4,8 @@ impact: LOW-MEDIUM
 impactDescription: reduces iterations
 tags: javascript, arrays, loops, performance
 ---
+
+
 
 ## Combine Multiple Array Iterations
 
@@ -15,7 +17,7 @@ Multiple `.filter()` or `.map()` calls iterate the array multiple times. Combine
 const admins = users.filter(u => u.isAdmin)
 const testers = users.filter(u => u.isTester)
 const inactive = users.filter(u => !u.isActive)
-```
+```	ext
 
 **Correct (1 iteration):**
 
@@ -29,4 +31,6 @@ for (const user of users) {
   if (user.isTester) testers.push(user)
   if (!user.isActive) inactive.push(user)
 }
-```
+```	ext
+
+

@@ -4,6 +4,8 @@ impact: LOW-MEDIUM
 impactDescription: avoids recreation
 tags: javascript, regexp, optimization, memoization
 ---
+
+
 
 ## Hoist RegExp Creation
 
@@ -17,7 +19,7 @@ function Highlighter({ text, query }: Props) {
   const parts = text.split(regex)
   return <>{parts.map((part, i) => ...)}</>
 }
-```
+```	ext
 
 **Correct (memoize or hoist):**
 
@@ -32,7 +34,7 @@ function Highlighter({ text, query }: Props) {
   const parts = text.split(regex)
   return <>{parts.map((part, i) => ...)}</>
 }
-```
+```	ext
 
 **Warning (global regex has mutable state):**
 
@@ -42,4 +44,6 @@ Global regex (`/g`) has mutable `lastIndex` state:
 const regex = /foo/g
 regex.test('foo')  // true, lastIndex = 3
 regex.test('foo')  // false, lastIndex = 0
-```
+```	ext
+
+

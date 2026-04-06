@@ -4,6 +4,8 @@ impact: HIGH
 impactDescription: reduces data transfer size
 tags: server, rsc, serialization, props
 ---
+
+
 
 ## Minimize Serialization at RSC Boundaries
 
@@ -21,7 +23,7 @@ async function Page() {
 function Profile({ user }: { user: User }) {
   return <div>{user.name}</div>  // uses 1 field
 }
-```
+```	ext
 
 **Correct (serializes only 1 field):**
 
@@ -35,4 +37,6 @@ async function Page() {
 function Profile({ name }: { name: string }) {
   return <div>{name}</div>
 }
-```
+```	ext
+
+

@@ -4,6 +4,8 @@ impact: LOW
 impactDescription: prevents effect re-runs
 tags: advanced, hooks, useLatest, refs, optimization
 ---
+
+
 
 ## useLatest for Stable Callback Refs
 
@@ -19,7 +21,7 @@ function useLatest<T>(value: T) {
   }, [value])
   return ref
 }
-```
+```	ext
 
 **Incorrect (effect re-runs on every callback change):**
 
@@ -32,7 +34,7 @@ function SearchInput({ onSearch }: { onSearch: (q: string) => void }) {
     return () => clearTimeout(timeout)
   }, [query, onSearch])
 }
-```
+```	ext
 
 **Correct (stable effect, fresh callback):**
 
@@ -46,4 +48,6 @@ function SearchInput({ onSearch }: { onSearch: (q: string) => void }) {
     return () => clearTimeout(timeout)
   }, [query])
 }
-```
+```	ext
+
+

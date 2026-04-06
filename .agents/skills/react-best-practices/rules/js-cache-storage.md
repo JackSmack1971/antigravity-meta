@@ -4,6 +4,8 @@ impact: LOW-MEDIUM
 impactDescription: reduces expensive I/O
 tags: javascript, localStorage, storage, caching, performance
 ---
+
+
 
 ## Cache Storage API Calls
 
@@ -16,7 +18,7 @@ function getTheme() {
   return localStorage.getItem('theme') ?? 'light'
 }
 // Called 10 times = 10 storage reads
-```
+```	ext
 
 **Correct (Map cache):**
 
@@ -34,7 +36,7 @@ function setLocalStorage(key: string, value: string) {
   localStorage.setItem(key, value)
   storageCache.set(key, value)  // keep cache in sync
 }
-```
+```	ext
 
 Use a Map (not a hook) so it works everywhere: utilities, event handlers, not just React components.
 
@@ -51,7 +53,7 @@ function getCookie(name: string) {
   }
   return cookieCache[name]
 }
-```
+```	ext
 
 **Important (invalidate on external changes):**
 
@@ -67,4 +69,6 @@ document.addEventListener('visibilitychange', () => {
     storageCache.clear()
   }
 })
-```
+```	ext
+
+

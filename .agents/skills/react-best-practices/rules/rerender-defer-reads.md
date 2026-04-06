@@ -4,6 +4,8 @@ impact: MEDIUM
 impactDescription: avoids unnecessary subscriptions
 tags: rerender, searchParams, localStorage, optimization
 ---
+
+
 
 ## Defer State Reads to Usage Point
 
@@ -22,7 +24,7 @@ function ShareButton({ chatId }: { chatId: string }) {
 
   return <button onClick={handleShare}>Share</button>
 }
-```
+```	ext
 
 **Correct (reads on demand, no subscription):**
 
@@ -36,4 +38,6 @@ function ShareButton({ chatId }: { chatId: string }) {
 
   return <button onClick={handleShare}>Share</button>
 }
-```
+```	ext
+
+

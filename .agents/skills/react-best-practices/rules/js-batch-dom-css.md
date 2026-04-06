@@ -4,6 +4,8 @@ impact: MEDIUM
 impactDescription: reduces reflows/repaints
 tags: javascript, dom, css, performance, reflow
 ---
+
+
 
 ## Batch DOM CSS Changes
 
@@ -19,7 +21,7 @@ function updateElementStyles(element: HTMLElement) {
   element.style.backgroundColor = 'blue'
   element.style.border = '1px solid black'
 }
-```
+```	ext
 
 **Correct (add class - single reflow):**
 
@@ -36,20 +38,20 @@ function updateElementStyles(element: HTMLElement) {
 function updateElementStyles(element: HTMLElement) {
   element.classList.add('highlighted-box')
 }
-```
+```	ext
 
 **Correct (change cssText - single reflow):**
 
 ```typescript
 function updateElementStyles(element: HTMLElement) {
-  element.style.cssText = `
+  element.style.cssText = `	ext
     width: 100px;
     height: 200px;
     background-color: blue;
     border: 1px solid black;
-  `
+  `	ext
 }
-```
+```	ext
 
 **React example:**
 
@@ -77,6 +79,8 @@ function Box({ isHighlighted }: { isHighlighted: boolean }) {
     </div>
   )
 }
-```
+```	ext
 
 Prefer CSS classes over inline styles when possible. Classes are cached by the browser and provide better separation of concerns.
+
+
