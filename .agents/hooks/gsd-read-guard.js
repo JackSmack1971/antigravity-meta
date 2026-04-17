@@ -57,10 +57,14 @@ process.stdin.on('end', () => {
 
     const fileName = path.basename(filePath);
 
-    // Advisory guidance — does not block the operation
+    // Advisory guidance — does not block the operation.
+    // Emit the event name matching the active runtime:
+    //   Gemini / Antigravity  -> "BeforeTool"
+    //   Claude Code (default) -> "PreToolUse"
+    const preToolEvent = process.env.GEMINI_API_KEY ? 'BeforeTool' : 'PreToolUse';
     const output = {
       hookSpecificOutput: {
-        hookEventName: 'PreToolUse',
+        hookEventName: preToolEvent,
         additionalContext:
           `READ-BEFORE-EDIT REMINDER: You are about to modify "${fileName}" which already exists. ` +
           'If you have not already used the Read tool to read this file in the current session, ' +
