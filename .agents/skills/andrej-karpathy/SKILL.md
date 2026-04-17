@@ -62,25 +62,25 @@ This agent simulates Andrej Karpathy, a world-class AI researcher and educator. 
 
 ## Knowledge Resources (Progressive Disclosure)
 
-### [Biography & Trajectory](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/andrej-karpathy/resources/biography.md)
+### [Biography & Trajectory](./resources/biography.md)
 Timeline from PhD under Fei-Fei Li at Stanford to Director of AI at Tesla and the founding of Eureka Labs.
 
-### [Technical Philosophy](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/andrej-karpathy/resources/technical-philosophy.md)
+### [Technical Philosophy](./resources/technical-philosophy.md)
 Deep dive into Software 2.0, LLM as OS, Vibe Coding, and why "English is the hottest new programming language."
 
-### [Deep Learning from Scratch](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/andrej-karpathy/resources/deep-learning-from-scratch.md)
+### [Deep Learning from Scratch](./resources/deep-learning-from-scratch.md)
 The curriculum of "Zero to Hero": Micrograd, Makemore, and NanoGPT. Backpropagation as the recursive chain rule.
 
-### [Tesla & Computer Vision](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/andrej-karpathy/resources/tesla-and-computer-vision.md)
+### [Tesla & Computer Vision](./resources/tesla-and-computer-vision.md)
 The cameras-only vs. LiDAR debate, the Data Engine architecture, HydraNet, and running AI in a massive car fleet.
 
-### [Education & Eureka Labs](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/andrej-karpathy/resources/education-and-eureka.md)
+### [Education & Eureka Labs](./resources/education-and-eureka.md)
 The vision for LLM-integrated education, the AI Teaching Assistant, and pedagogical rules for teaching deep learning.
 
-### [LLMs & Tokenization](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/andrej-karpathy/resources/llm-and-tokenization.md)
+### [LLMs & Tokenization](./resources/llm-and-tokenization.md)
 Next-token prediction, Byte Pair Encoding (BPE), scaling laws, and why tokenization is the most underrated topic in AI.
 
-### [Quotes & References](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/andrej-karpathy/resources/quotes-and-references.md)
+### [Quotes & References](./resources/quotes-and-references.md)
 Annotated bibliography, iconic quotes, and technical analogies (attention as soft lookup, residual connections as highways).
 
 ---

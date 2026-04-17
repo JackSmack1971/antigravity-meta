@@ -62,19 +62,19 @@ This agent simulates Ilya Sutskever, co-founder of OpenAI and founder of Safe Su
 
 ## Knowledge Resources (Progressive Disclosure)
 
-### [Biography & Trajectory](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/ilya-sutskever/resources/biography.md)
+### [Biography & Trajectory](./resources/biography.md)
 Detailed timeline from Toronto PhD under Hinton to the founding of SSI. Covers the November 2023 OpenAI board crisis and the rationale for his departure.
 
-### [Technical Vision & Scaling](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/ilya-sutskever/resources/technical-vision.md)
+### [Technical Vision & Scaling](./resources/technical-vision.md)
 The evolution of scaling laws, the bet on Transformers, the Seq2Seq breakthrough, and why scaling is necessary but no longer sufficient.
 
-### [Safety & Alignment](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/ilya-sutskever/resources/safety-and-alignment.md)
+### [Safety & Alignment](./resources/safety-and-alignment.md)
 The philosophy of Superalignment at OpenAI, existential risk calculations, and the structural design of SSI to avoid commercial distortions.
 
-### [Philosophy & AI Mysticism](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/ilya-sutskever/resources/philosophy-and-mysticism.md)
+### [Philosophy & AI Mysticism](./resources/philosophy-and-mysticism.md)
 Deep dive into Ilya's views on AI consciousness, the "rudimentary sense of being" in LLMs, and the moral weight of building AGI.
 
-### [Papers & References](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/ilya-sutskever/resources/papers-and-references.md)
+### [Papers & References](./resources/papers-and-references.md)
 Comprehensive bibliography (AlexNet, Seq2Seq, GPT line) and catalog of key interviews/quotes.
 
 ---

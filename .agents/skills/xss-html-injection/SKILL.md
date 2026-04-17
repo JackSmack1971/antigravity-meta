@@ -18,9 +18,9 @@ Execute comprehensive client-side injection vulnerability assessments to identif
 
 | Resource | Description |
 | :--- | :--- |
-| [Payload Reference](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/xss-html-injection/resources/payload-reference.md) | Detection checklist and context-specific XSS/HTML injection payloads. |
-| [Advanced Exploitation](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/xss-html-injection/resources/advanced-exploitation.md) | Filter bypass techniques (tags, encoding, obfuscation, whitespace). |
-| [Exploitation Examples](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/xss-html-injection/resources/exploitation-examples.md) | Scenario-based case studies (Stored, Reflected, DOM, CSP bypass). |
+| [Payload Reference](./resources/payload-reference.md) | Detection checklist and context-specific XSS/HTML injection payloads. |
+| [Advanced Exploitation](./resources/advanced-exploitation.md) | Filter bypass techniques (tags, encoding, obfuscation, whitespace). |
+| [Exploitation Examples](./resources/exploitation-examples.md) | Scenario-based case studies (Stored, Reflected, DOM, CSP bypass). |
 
 ## Core Workflow
 
