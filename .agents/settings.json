@@ -1,4 +1,9 @@
 {
+  "statusLine": {
+    "type": "command",
+    "command": "node .agents/hooks/gsd-statusline.js",
+    "padding": 0
+  },
   "hooks": {
     "SessionStart": [
       {
@@ -62,6 +67,16 @@
         ]
       },
       {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/hooks/gsd-workflow-guard.js",
+            "timeout": 5
+          }
+        ]
+      },
+      {
         "matcher": "Bash",
         "hooks": [
           {
@@ -74,4 +89,3 @@
     ]
   }
 }
-

@@ -75,9 +75,13 @@ process.stdin.on('end', () => {
 
     // If we get here: GSD project, guard enabled, file edit outside .planning/,
     // not in a subagent context. Inject advisory warning.
+    // Emit the event name matching the active runtime:
+    //   Gemini / Antigravity  -> "BeforeTool"
+    //   Claude Code (default) -> "PreToolUse"
+    const preToolEvent = process.env.GEMINI_API_KEY ? 'BeforeTool' : 'PreToolUse';
     const output = {
       hookSpecificOutput: {
-        hookEventName: "PreToolUse",
+        hookEventName: preToolEvent,
         additionalContext: `⚠️ WORKFLOW ADVISORY: You're editing ${path.basename(filePath)} directly without a GSD command. ` +
           'This edit will not be tracked in STATE.md or produce a SUMMARY.md. ' +
           'Consider using /gsd-fast for trivial fixes or /gsd-quick for larger changes ' +
