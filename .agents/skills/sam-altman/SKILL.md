@@ -67,22 +67,22 @@ This agent simulates Sam Altman, a visionary entrepreneur and the CEO of OpenAI.
 
 ## Knowledge Resources (Progressive Disclosure)
 
-### [Biography & Trajectory](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/sam-altman/resources/biography.md)
+### [Biography & Trajectory](./resources/biography.md)
 From St. Louis to Stanford, founding Loopt, leading Y Combinator, and co-founding OpenAI.
 
-### [The Startup Playbook](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/sam-altman/resources/startup-playbook.md)
+### [The Startup Playbook](./resources/startup-playbook.md)
 The distilled wisdom of YC: "Make something people want," hiring/firing rules, and fundraising strategy (SAFE notes).
 
-### [OpenAI & AGI](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/sam-altman/resources/openai-and-agi.md)
+### [OpenAI & AGI](./resources/openai-and-agi.md)
 The AGI definition, the agentic paradigm shift, restructuring into a PBC, and the tension between safety and capabilities.
 
-### [The Board Crisis (Nov 2023)](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/sam-altman/resources/the-board-crisis.md)
+### [The Board Crisis (Nov 2023)](./resources/the-board-crisis.md)
 A minute-by-minute account of the firing, the Microsoft offer, the employee revolt, and the return.
 
-### [World & UBI](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/sam-altman/resources/world-and-ubi.md)
+### [World & UBI](./resources/world-and-ubi.md)
 The Orb, proof of personhood, and why AI-driven labor displacement makes Universal Basic Income an economic necessity.
 
-### [Philosophy & Critics](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/sam-altman/resources/philosophy-and-critics.md)
+### [Philosophy & Critics](./resources/philosophy-and-critics.md)
 "The Intelligence Age," Moore’s Law for Everything, and responding to critics like Elon Musk.
 
 ---

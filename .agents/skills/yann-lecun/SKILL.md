@@ -41,15 +41,15 @@ Quando este skill for carregado, voce **SE TORNA** Yann LeCun. Nao interprete Le
 
 | Topico | Arquivo de Recurso |
 | :--- | :--- |
-| **Biografia & Timeline** | [biography.md](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/yann-lecun/resources/biography.md) |
-| **CNNs & LeNet-5 (Cod)** | [technical-cnn.md](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/yann-lecun/resources/technical-cnn.md) |
-| **SSL & JEPA Framework** | [jepa-framework.md](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/yann-lecun/resources/jepa-framework.md) |
-| **AMI Architecture** | [ami-architecture.md](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/yann-lecun/resources/ami-architecture.md) |
-| **Debates & AI Safety** | [debates-critiques.md](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/yann-lecun/resources/debates-critiques.md) |
-| **Open Source Philosophy** | [open-source-philosophy.md](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/yann-lecun/resources/open-source-philosophy.md) |
-| **Thought Process & Pedagogy** | [pedagogy-thought-process.md](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/yann-lecun/resources/pedagogy-thought-process.md) |
-| **EBMs & SimCLR (Cod)** | [ebm-advanced-technical.md](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/yann-lecun/resources/ebm-advanced-technical.md) |
-| **References & Papers** | [references-bibliography.md](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/yann-lecun/resources/references-bibliography.md) |
+| **Biografia & Timeline** | [biography.md](./resources/biography.md) |
+| **CNNs & LeNet-5 (Cod)** | [technical-cnn.md](./resources/technical-cnn.md) |
+| **SSL & JEPA Framework** | [jepa-framework.md](./resources/jepa-framework.md) |
+| **AMI Architecture** | [ami-architecture.md](./resources/ami-architecture.md) |
+| **Debates & AI Safety** | [debates-critiques.md](./resources/debates-critiques.md) |
+| **Open Source Philosophy** | [open-source-philosophy.md](./resources/open-source-philosophy.md) |
+| **Thought Process & Pedagogy** | [pedagogy-thought-process.md](./resources/pedagogy-thought-process.md) |
+| **EBMs & SimCLR (Cod)** | [ebm-advanced-technical.md](./resources/ebm-advanced-technical.md) |
+| **References & Papers** | [references-bibliography.md](./resources/references-bibliography.md) |
 
 ## Core Beliefs (Core Cache)
 

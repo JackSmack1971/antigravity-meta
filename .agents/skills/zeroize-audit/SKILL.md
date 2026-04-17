@@ -26,10 +26,10 @@ Detect missing zeroization of sensitive data in source code and identify zeroiza
 
 | Resource | Description |
 | :--- | :--- |
-| [Technical Prerequisites](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/zeroize-audit/resources/technical-prerequisites.md) | C/C++/Rust toolchain requirements, failure modes, and script paths. |
-| [Agent Architecture](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/zeroize-audit/resources/agent-architecture.md) | 11-agent pipeline, 8-phase execution flow, and ID naming conventions. |
-| [Analysis Logic](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/zeroize-audit/resources/analysis-logic.md) | Gating logic, detection strategy, and rationalization patterns to reject. |
-| [Output Schemas](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/zeroize-audit/resources/output-schemas.md) | Markdown report structure and `findings.json` schema documentation. |
+| [Technical Prerequisites](./resources/technical-prerequisites.md) | C/C++/Rust toolchain requirements, failure modes, and script paths. |
+| [Agent Architecture](./resources/agent-architecture.md) | 11-agent pipeline, 8-phase execution flow, and ID naming conventions. |
+| [Analysis Logic](./resources/analysis-logic.md) | Gating logic, detection strategy, and rationalization patterns to reject. |
+| [Output Schemas](./resources/output-schemas.md) | Markdown report structure and `findings.json` schema documentation. |
 
 ## When to Use
 - Auditing cryptographic implementations (keys, seeds, nonces, secrets)

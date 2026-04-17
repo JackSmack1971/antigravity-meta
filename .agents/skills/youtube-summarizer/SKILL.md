@@ -18,8 +18,8 @@ This skill extracts transcripts from YouTube videos and generates comprehensive,
 
 | Resource | Description |
 | :--- | :--- |
-| [Workflow Details](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/youtube-summarizer/resources/workflow-details.md) | Technical CLI commands, Python logic, and error handlers for extraction. |
-| [Output & Examples](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/youtube-summarizer/resources/output-examples.md) | STAR + R-I-S-E framework details, formatting guides, and summary examples. |
+| [Workflow Details](./resources/workflow-details.md) | Technical CLI commands, Python logic, and error handlers for extraction. |
+| [Output & Examples](./resources/output-examples.md) | STAR + R-I-S-E framework details, formatting guides, and summary examples. |
 
 ## When to Use This Skill
 
@@ -46,15 +46,15 @@ Display a visual progress gauge before each step (e.g., `[████░░░�
 
 ### Step 1: Validate YouTube URL
 Extract video ID from supported formats (`watch?v=`, `youtu.be/`, etc.).  
-> See [Workflow Details: Step 1](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/youtube-summarizer/resources/workflow-details.md#step-1-validate-youtube-url)
+> See [Workflow Details: Step 1](./resources/workflow-details.md#step-1-validate-youtube-url)
 
 ### Step 2: Check Availability
 Verify video exists and transcripts are accessible (not disabled/private).  
-> See [Workflow Details: Step 2](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/youtube-summarizer/resources/workflow-details.md#step-2-check-video--transcript-availability)
+> See [Workflow Details: Step 2](./resources/workflow-details.md#step-2-check-video--transcript-availability)
 
 ### Step 3: Extract Transcript
 Retrieve transcript in preferred language with English fallback.  
-> See [Workflow Details: Step 3](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/youtube-summarizer/resources/workflow-details.md#step-3-extract-transcript)
+> See [Workflow Details: Step 3](./resources/workflow-details.md#step-3-extract-transcript)
 
 ### Step 4: Generate Comprehensive Summary
 Apply the **STAR + R-I-S-E** framework to the transcript.
@@ -63,7 +63,7 @@ Apply the **STAR + R-I-S-E** framework to the transcript.
 
 ### Step 5: Format and Present Output
 Deliver clean Markdown with executive synthesis, detailed breakdown, and terminology.  
-> See [Output & Examples](file:///c:/workspaces/antigravity%20hybrid/.agents/skills/youtube-summarizer/resources/output-examples.md)
+> See [Output & Examples](./resources/output-examples.md)
 
 ---
 **Version:** 1.2.1 (Sharded)
