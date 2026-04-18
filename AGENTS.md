@@ -15,3 +15,4 @@ GSD layered on top guarantees the atomic Spec → Plan → Execute → Verify �
 4. `security-mandate.md` - Execute under strict boundary protocols
 5. `strong-reasoner-planner.md` - Reason and formulate plans atomically
 6. `code-quality-git-testing.md` - Clean code with verified tests
+7. `skill-governance.md` - Mandatory sharding and character limit rules

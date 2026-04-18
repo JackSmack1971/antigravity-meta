@@ -3,6 +3,7 @@
 **Current Stage: SHARD_COMPLETE**
 Target: antigravity-meta-v2-scaffolding
 
+- 2026-04-18: Formalized `skill-governance.md` rules (Resource-First updates).
 - 2026-04-18: Final verification COMPLETE. All 12 oversized skills sharded and under 12k limit.
 - 2026-04-18: Sharding COMPLETE for `analyze-project` skill.
 - 2026-04-18: Sharding COMPLETE for `observability-engineer` skill.
