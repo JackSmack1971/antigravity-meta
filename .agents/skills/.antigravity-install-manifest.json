@@ -1374,6 +1374,10 @@
     "zod-validation-expert",
     "zoho-crm-automation",
     "zoom-automation",
-    "zustand-store-ts"
+    "zustand-store-ts",
+    "planning-with-files-de",
+    "planning-with-files-es",
+    "planning-with-files-zh",
+    "planning-with-files-ar"
   ]
 }

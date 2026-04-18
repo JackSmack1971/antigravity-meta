@@ -1,114 +1,63 @@
 # Progress Log
-<!-- 
-  WHAT: Your session log - a chronological record of what you did, when, and what happened.
-  WHY: Answers "What have I done?" in the 5-Question Reboot Test. Helps you resume after breaks.
-  WHEN: Update after completing each phase or encountering errors. More detailed than task_plan.md.
+<!--
+  GSD INTEGRATION NOTE:
+  This file augments task.md. It provides the chronological session log that task.md
+  summarizes. Do NOT replace task.md — task.md holds GSD atomic state (current phase,
+  blockers); progress.md holds the detailed timeline of what happened and when.
+  After each session, update task.md "Last Updated" and "Session Summary" fields.
 -->
+
+## task.md Sync Status
+<!-- After each session, update task.md with summary. -->
+- **Last synced to task.md:** [timestamp or "not yet"]
+- **task.md current phase updated:** [ ] Yes / [ ] No
 
 ## Session: [DATE]
-<!-- 
-  WHAT: The date of this work session.
-  WHY: Helps track when work happened, useful for resuming after time gaps.
-  EXAMPLE: 2026-01-15
--->
 
-### Phase 1: [Title]
-<!-- 
-  WHAT: Detailed log of actions taken during this phase.
-  WHY: Provides context for what was done, making it easier to resume or debug.
-  WHEN: Update as you work through the phase, or at least when you complete it.
--->
-- **Status:** in_progress
+### GSD Context
+<!-- Keep aligned with GSD phase lifecycle. -->
+- **GSD Phase:** [Spec | Plan | Execute | Verify | Commit]
+- **Planning Phase:** Phase [N]
 - **Started:** [timestamp]
-<!-- 
-  STATUS: Same as task_plan.md (pending, in_progress, complete)
-  TIMESTAMP: When you started this phase (e.g., "2026-01-15 10:00")
--->
-- Actions taken:
-  <!-- 
-    WHAT: List of specific actions you performed.
-    EXAMPLE:
-      - Created todo.py with basic structure
-      - Implemented add functionality
-      - Fixed FileNotFoundError
-  -->
-  -
-- Files created/modified:
-  <!-- 
-    WHAT: Which files you created or changed.
-    WHY: Quick reference for what was touched. Helps with debugging and review.
-    EXAMPLE:
-      - todo.py (created)
-      - todos.json (created by app)
-      - task_plan.md (updated)
-  -->
-  -
 
-### Phase 2: [Title]
-<!-- 
-  WHAT: Same structure as Phase 1, for the next phase.
-  WHY: Keep a separate log entry for each phase to track progress clearly.
--->
-- **Status:** pending
-- Actions taken:
-  -
-- Files created/modified:
-  -
+### Actions Taken
+<!-- Chronological log of significant actions this session. -->
+-
 
-## Test Results
-<!-- 
-  WHAT: Table of tests you ran, what you expected, what actually happened.
-  WHY: Documents verification of functionality. Helps catch regressions.
-  WHEN: Update as you test features, especially during Phase 4 (Testing & Verification).
-  EXAMPLE:
-    | Add task | python todo.py add "Buy milk" | Task added | Task added successfully | ✓ |
-    | List tasks | python todo.py list | Shows all tasks | Shows all tasks | ✓ |
--->
+### GSD Phase Transitions
+<!-- Log every GSD phase transition and what triggered it. -->
+| From | To | Trigger | Timestamp |
+|------|----|---------|-----------|
+|      |    |         |           |
+
+### Files Created/Modified
+<!-- Every file touched this session. -->
+| File | Action | Notes |
+|------|--------|-------|
+|      |        |       |
+
+### Test Results
+<!-- For GSD Verify phase. -->
 | Test | Input | Expected | Actual | Status |
 |------|-------|----------|--------|--------|
 |      |       |          |        |        |
 
-## Error Log
-<!-- 
-  WHAT: Detailed log of every error encountered, with timestamps and resolution attempts.
-  WHY: More detailed than task_plan.md's error table. Helps you learn from mistakes.
-  WHEN: Add immediately when an error occurs, even if you fix it quickly.
-  EXAMPLE:
-    | 2026-01-15 10:35 | FileNotFoundError | 1 | Added file existence check |
-    | 2026-01-15 10:37 | JSONDecodeError | 2 | Added empty file handling |
--->
-<!-- Keep ALL errors - they help avoid repetition -->
+### Error Log
+<!-- Log EVERY error immediately with timestamp. See also: task_plan.md Errors table. -->
 | Timestamp | Error | Attempt | Resolution |
 |-----------|-------|---------|------------|
 |           |       | 1       |            |
 
 ## 5-Question Reboot Check
-<!-- 
-  WHAT: Five questions that verify your context is solid. If you can answer these, you're on track.
-  WHY: This is the "reboot test" - if you can answer all 5, you can resume work effectively.
-  WHEN: Update periodically, especially when resuming after a break or context reset.
-  
-  THE 5 QUESTIONS:
-  1. Where am I? → Current phase in task_plan.md
-  2. Where am I going? → Remaining phases
-  3. What's the goal? → Goal statement in task_plan.md
-  4. What have I learned? → See findings.md
-  5. What have I done? → See progress.md (this file)
--->
-<!-- If you can answer these, context is solid -->
+<!-- Answer these to confirm context is solid before continuing after any break. -->
 | Question | Answer |
 |----------|--------|
-| Where am I? | Phase X |
-| Where am I going? | Remaining phases |
-| What's the goal? | [goal statement] |
+| Where am I? (GSD Phase) | GSD: [phase] / Planning: Phase [N] |
+| Where am I going? | Remaining phases: [list] |
+| What's the goal? | [from task_plan.md Goal] |
 | What have I learned? | See findings.md |
-| What have I done? | See above |
+| What have I done? | See Actions Taken above |
 
 ---
-<!-- 
-  REMINDER: 
-  - Update after completing each phase or encountering errors
-  - Be detailed - this is your "what happened" log
-  - Include timestamps for errors to track when issues occurred
--->
 *Update after completing each phase or encountering errors*
+*After each session, sync summary to task.md*

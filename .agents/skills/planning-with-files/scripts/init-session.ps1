@@ -1,60 +1,55 @@
-#!/bin/bash
-# Initialize planning files for a new GSD session
-# Usage: ./init-session.sh [--template TYPE] [--from-spec] [project-name]
+# Initialize planning files for a new GSD session (PowerShell)
+# Usage: .\init-session.ps1 [-Template TYPE] [-FromSpec] [project-name]
 #
 # Adapted for Google Antigravity IDE (.agents/ plural convention)
 # Templates: default, analytics
-# --from-spec: derive phase names from SPEC.md if present
+# -FromSpec: derive phase names from SPEC.md if present
 
-set -e
+param(
+    [string]$ProjectName = "project",
+    [string]$Template    = "default",
+    [switch]$FromSpec
+)
 
-TEMPLATE="default"
-PROJECT_NAME="project"
-FROM_SPEC=false
-
-while [[ $# -gt 0 ]]; do
-    case "$1" in
-        --template|-t) TEMPLATE="$2"; shift 2 ;;
-        --from-spec)   FROM_SPEC=true; shift ;;
-        *)             PROJECT_NAME="$1"; shift ;;
-    esac
-done
-
-DATE=$(date +%Y-%m-%d)
+$DATE = Get-Date -Format "yyyy-MM-dd"
 
 # Resolve template directory — skill root is one level up from scripts/
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-SKILL_ROOT="$(dirname "$SCRIPT_DIR")"
-TEMPLATE_DIR="$SKILL_ROOT/templates"
+$ScriptDir   = Split-Path -Parent $MyInvocation.MyCommand.Path
+$SkillRoot   = Split-Path -Parent $ScriptDir
+$TemplateDir = Join-Path $SkillRoot "templates"
 
-echo "Initializing planning files for: $PROJECT_NAME (template: $TEMPLATE)"
+Write-Host "Initializing planning files for: $ProjectName (template: $Template)"
 
 # Validate template
-if [ "$TEMPLATE" != "default" ] && [ "$TEMPLATE" != "analytics" ]; then
-    echo "Unknown template: $TEMPLATE (available: default, analytics). Using default."
-    TEMPLATE="default"
-fi
+if ($Template -ne "default" -and $Template -ne "analytics") {
+    Write-Host "Unknown template: $Template (available: default, analytics). Using default."
+    $Template = "default"
+}
 
-# --- Derive spec goal if --from-spec ---
-SPEC_GOAL=""
-GSD_PHASE="Plan"
-if [ "$FROM_SPEC" = true ] && [ -f "SPEC.md" ]; then
-    # Try to extract the first non-empty line after a "## Goal" or "# " heading
-    SPEC_GOAL=$(grep -A2 "^## Goal\|^# " SPEC.md 2>/dev/null | grep -v "^#" | grep -v "^$" | head -1 || true)
-    echo "Detected SPEC.md — deriving plan from spec."
-fi
+# --- Derive spec goal if -FromSpec ---
+$SpecGoal = "[One sentence describing the end state — copy from SPEC.md Goal section]"
+$GsdPhase = "Plan"
+if ($FromSpec -and (Test-Path "SPEC.md")) {
+    $specLines = Get-Content "SPEC.md"
+    $goalIdx   = ($specLines | Select-String -Pattern "^## Goal" | Select-Object -First 1).LineNumber
+    if ($goalIdx) {
+        $candidate = ($specLines[$goalIdx..($goalIdx+2)] | Where-Object { $_ -notmatch "^#" -and $_.Trim() -ne "" } | Select-Object -First 1)
+        if ($candidate) { $SpecGoal = $candidate.Trim() }
+    }
+    Write-Host "Detected SPEC.md — deriving plan from spec."
+}
 
 # --- Create task_plan.md ---
-if [ ! -f "task_plan.md" ]; then
-    if [ "$TEMPLATE" = "analytics" ] && [ -f "$TEMPLATE_DIR/analytics_task_plan.md" ]; then
-        cp "$TEMPLATE_DIR/analytics_task_plan.md" task_plan.md
-    else
-        GOAL_LINE="${SPEC_GOAL:-[One sentence describing the end state — copy from SPEC.md Goal section]}"
-        cat > task_plan.md << EOF
-# Task Plan: $PROJECT_NAME
+if (-not (Test-Path "task_plan.md")) {
+    $AnalyticsPlan = Join-Path $TemplateDir "analytics_task_plan.md"
+    if ($Template -eq "analytics" -and (Test-Path $AnalyticsPlan)) {
+        Copy-Item $AnalyticsPlan "task_plan.md"
+    } else {
+        @"
+# Task Plan: $ProjectName
 
 ## Goal
-$GOAL_LINE
+$SpecGoal
 
 ## SPEC.md Alignment
 - **SPEC.md last read:** $DATE
@@ -63,7 +58,7 @@ $GOAL_LINE
   - [ ] [Requirement 2 from SPEC.md]
 
 ## GSD Current Phase
-GSD Phase: $GSD_PHASE
+GSD Phase: $GsdPhase
 Planning Phase: Phase 1
 
 ## Phases
@@ -99,7 +94,7 @@ Planning Phase: Phase 1
 ### Phase 5: Delivery & Commit
 - [ ] Review all output files
 - [ ] Deliverables meet SPEC.md acceptance criteria
-- [ ] All planning phases complete → run check-complete.sh
+- [ ] All planning phases complete -> run check-complete.ps1
 - [ ] Commit following code-quality-git-testing.md conventions
 - **Status:** pending
 
@@ -110,16 +105,16 @@ Planning Phase: Phase 1
 ## Errors Encountered
 | Error | Attempt | Resolution | Phase |
 |-------|---------|------------|-------|
-EOF
-    fi
-    echo "Created task_plan.md"
-else
-    echo "task_plan.md already exists, skipping"
-fi
+"@ | Out-File -FilePath "task_plan.md" -Encoding UTF8
+    }
+    Write-Host "Created task_plan.md"
+} else {
+    Write-Host "task_plan.md already exists, skipping"
+}
 
 # --- Create findings.md ---
-if [ ! -f "findings.md" ]; then
-    cat > findings.md << 'EOF'
+if (-not (Test-Path "findings.md")) {
+    @"
 # Findings & Decisions
 
 ## state.md Sync Status
@@ -151,15 +146,15 @@ if [ ! -f "findings.md" ]; then
 ---
 *Update after every 2 view/browser/search operations (2-Action Rule)*
 *After updating, add/refresh pointer in state.md: "Research context: See findings.md"*
-EOF
-    echo "Created findings.md"
-else
-    echo "findings.md already exists, skipping"
-fi
+"@ | Out-File -FilePath "findings.md" -Encoding UTF8
+    Write-Host "Created findings.md"
+} else {
+    Write-Host "findings.md already exists, skipping"
+}
 
 # --- Create progress.md ---
-if [ ! -f "progress.md" ]; then
-    cat > progress.md << EOF
+if (-not (Test-Path "progress.md")) {
+    @"
 # Progress Log
 
 ## task.md Sync Status
@@ -200,21 +195,21 @@ if [ ! -f "progress.md" ]; then
 | What's the goal? | [from task_plan.md Goal] |
 | What have I learned? | See findings.md |
 | What have I done? | Session started |
-EOF
-    echo "Created progress.md"
-else
-    echo "progress.md already exists, skipping"
-fi
+"@ | Out-File -FilePath "progress.md" -Encoding UTF8
+    Write-Host "Created progress.md"
+} else {
+    Write-Host "progress.md already exists, skipping"
+}
 
 # --- Remind to update state.md ---
-if [ -f "state.md" ] && ! grep -q "findings.md" state.md 2>/dev/null; then
-    echo ""
-    echo "REMINDER: Add this pointer to state.md:"
-    echo "  Research context: See findings.md"
-fi
+if ((Test-Path "state.md") -and -not (Select-String -Path "state.md" -Pattern "findings.md" -Quiet 2>$null)) {
+    Write-Host ""
+    Write-Host "REMINDER: Add this pointer to state.md:"
+    Write-Host "  Research context: See findings.md"
+}
 
-echo ""
-echo "Planning files initialized for Antigravity GSD workflow!"
-echo "Files: task_plan.md, findings.md, progress.md"
-echo "Skill: .agents/skills/planning-with-files/"
-echo "Hooks: .agents/hooks/planning-with-files-*.sh"
+Write-Host ""
+Write-Host "Planning files initialized for Antigravity GSD workflow!"
+Write-Host "Files: task_plan.md, findings.md, progress.md"
+Write-Host "Skill: .agents/skills/planning-with-files/"
+Write-Host "Hooks: .agents/hooks/planning-with-files-*.ps1"
