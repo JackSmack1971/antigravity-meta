@@ -5,7 +5,7 @@ This document serves as the high-level summary and cross-tool master rule of the
 
 ### Agents & Skills Directory
 All custom behaviors reside in `.agents/skills` and `.agents/rules`.
-Awesome-Skills Pack (1,300+ skills) operates at the global or local scope, ensuring maximum context availability.
+Curated High-Performance Skill Set (48 skills) — local scope only. This curated set ensures maximum context availability.
 GSD layered on top guarantees the atomic Spec → Plan → Execute → Verify → Commit workflow.
 
 ### Rules Layer
