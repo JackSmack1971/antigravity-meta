@@ -7,6 +7,26 @@ and this project adheres to [Conventional Commits](https://www.conventionalcommi
 
 ## [Unreleased]
 
+## [v1.6.0] - 2026-04-18
+
+### Minor
+- feat(persistent-planning): integrate gemini-planning-with-files v1.6.0
+
+## [v1.5.2] - 2026-04-18
+
+### Patch
+- fix(docs): correct skills pack branding in README
+
+## [v1.5.1] - 2026-04-18
+
+### Patch
+- chore(semver): polish changelog automation to include commit summaries
+
+## [v1.5.0] - 2026-04-18
+
+### Minor
+- Automated release via local SemVer tooling.
+
 ## [1.3.0-hardening] - 2026-04-18
 
 ### Changed
