@@ -1,9 +1,9 @@
 # 🚀 Antigravity Hybrid Agent Framework
 
-> **Awesome-Skills + GSD + Full BMAD + Persistent Planning — 2026 Power-User Edition**
+> **Curated Patterns + GSD + Full BMAD + Persistent Planning — 2026 Power-User Edition**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/Skills-1%2C423%2B-blue)](docs/SKILLS-CATALOG.md)
+[![Skills](https://img.shields.io/badge/Skills-48%20Curated-blue)](docs/SKILLS-CATALOG.md)
 [![IDE](https://img.shields.io/badge/IDE-Google%20Antigravity-4285F4?logo=google)](https://antigravity.google)
 [![Updated](https://img.shields.io/badge/Updated-April%202026-brightgreen)](docs/CHANGELOG.md)
 [![BMAD](https://img.shields.io/badge/Method-BMAD%20Agile-orange)](docs/BMAD-CHEATSHEET.md)
@@ -14,7 +14,7 @@ The cleanest, most powerful drop-in agentic development workspace for **Google A
 
 | Layer | What it is | What it gives you |
 |---|---|---|
-| 🛠️ **Awesome-Skills** | 1,423+ reusable AI task scaffolds | Instant capability for any everyday dev task |
+| 🛠️ **Curated Skills** | 48 product-grade AI patterns | Battle-tested scaffolds for DDD, TDD, and Clean Code |
 | ⚡ **GSD** | Atomic, anti-vibe-coding workflow | Clean git history, disciplined solo execution |
 | 👥 **BMAD** | Full Agile AI squad simulation | PM, Architect, Dev, QA roles on demand |
 | 🧠 **Persistent Planning** | Manus-style filesystem memory | Zero context loss across sessions and restarts |
@@ -97,11 +97,12 @@ That's it. The installer will:
 
 ## 🏗️ The Four Pillars Explained
 
-### 🛠️ Pillar 1 — Awesome-Skills (1,423+ Skills)
+### 🛠️ Pillar 1 — Curated Skills (48 Patterns)
 
-**What it is:** A curated library of 1,423+ pre-written AI task templates (called *skills*) for common development tasks — scaffolding a Next.js app, writing a REST API, generating tests, etc.
+**What it is:** A hand-picked library of 48 high-performance AI task templates (skills) focused on modern engineering excellence—DDD, TDD, and Clean Architecture.
 
-**Why it matters:** Instead of writing a vague prompt like *"make me a login page"*, you invoke a precise, battle-tested scaffold: `Use skill: nextjs-auth-pages`. The agent gets exact instructions; you get production-quality output.
+**Why it matters (Less is More):** 
+Moving from 1,400+ generic skills to 48 curated patterns reduces indexing latency and prevents decision fatigue. It ensures the agent defaults to industry-standard patterns (like Shadcn or Drizzle) rather than getting lost in noisy, legacy alternatives. These skills are designed to be **complementary** to BMAD/GSD: the workflows define the *process*, while the curated skills define the *implementation*.
 
 **How to use one:**
 ```text
@@ -208,7 +209,7 @@ Everything lives under a single `.agents/` directory — no scattered config fil
 ```text
 .
 ├── .agents/                        ← Single source of truth for all agent config
-│   ├── skills/                     ← 1,423+ Awesome-Skills task scaffolds
+│   ├── skills/                     ← 48 Curated High-Performance Patterns
 │   ├── rules/                      ← 6 always-active governance rule files
 │   ├── workflows/                  ← BMAD agent personas & slash-command handlers
 │   ├── get-shit-done/              ← GSD core logic and phase enforcement
@@ -274,7 +275,7 @@ Type any of these directly into Agent Manager:
 | `/dev` | BMAD | Activate Developer persona (implementation focus) |
 | `/qa` | BMAD | Activate QA Engineer persona (testing focus) |
 | `/self-audit` | Maintenance | Run the built-in workspace integrity check |
-| `Use skill: [skill-name]` | Skills | Directly invoke any of the 1,423+ Awesome Skills |
+| `Use skill: [skill-name]` | Skills | Directly invoke any of the 48 curated skills |
 | `Explain current architecture` | Any | Quick status dump of active plan and agent state |
 
 ### When to Use GSD vs BMAD
@@ -375,7 +376,7 @@ npx -y bmad-method install --tools antigravity --yes
 ### Skills not found (`skill not recognized` error)
 
 **Cause:** Awesome-Skills Pack may be outdated or the `.agents/skills/` folder is empty.  
-**Fix:** Run `npx antigravity-awesome-skills --update` and restart Agent Manager.
+**Fix:** Re-run the pruning script to restore the curated 48-pattern set.
 
 ### `/pm` or `/architect` not doing anything
 
@@ -396,7 +397,7 @@ npx -y bmad-method install --tools antigravity --yes
 | 🏗️ [Architecture Overview](docs/ARCHITECTURE.md) | How `.agents/` is structured and how layers interact |
 | ⚡ [GSD Quickstart](docs/GSD-QUICKSTART.md) | Step-by-step guide to atomic, anti-vibe-coding workflow |
 | 👥 [BMAD Cheat Sheet](docs/BMAD-CHEATSHEET.md) | All slash commands, agent roles, and handoff protocols |
-| 🛠️ [Awesome-Skills Catalog](docs/SKILLS-CATALOG.md) | Full index of all 1,423+ skills with usage examples |
+| 🛠️ [Curated Skills Catalog](docs/SKILLS-CATALOG.md) | Full index of the 48 curated patterns with usage examples |
 | ⚖️ [Rules Reference](docs/RULES-REFERENCE.md) | Detailed breakdown of all 6 governance rule files |
 | 📝 [Contributing](docs/CONTRIBUTING.md) | How to add skills, propose rule changes, or submit fixes |
 | 🔄 [Changelog](docs/CHANGELOG.md) | Full version history and breaking changes |
@@ -425,7 +426,7 @@ npx -y bmad-method install --tools antigravity --yes
 
 | Project | What it contributed |
 |---|---|
-| 🚀 [**Awesome-Skills Pack**](https://github.com/antigravity-awesome-skills) | 1,423+ production-ready agentic skills with official Antigravity installer |
+| 🚀 [**Curated Skills Pack**](docs/SKILLS-CATALOG.md) | 48 high-performance agentic skills focused on DDD, TDD, and clean architecture |
 | ⚡ [**GSD — Get Shit Done**](https://github.com/get-shit-done-cc) | Atomic anti-vibe-coding workflow engine optimized for Antigravity |
 | 👥 [**BMAD Method**](https://github.com/bmad-method) | Full Agile AI squad simulation with slash-command orchestration |
 | 🧠 [**planning-with-files**](https://github.com/OthmanAdi/planning-with-files) | Manus-style persistent filesystem memory — integrated natively into this framework |
