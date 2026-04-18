@@ -39,23 +39,23 @@ if (bump === 'major') {
 }
 
 const newVersion = `v${major}.${minor}.${patch}`;
+const today = new Date().toISOString().split('T')[0];
 
 console.log(`Bumping ${latestTag} → ${newVersion}`);
 
 // Update CHANGELOG.md (append new section)
 try {
   let changelog = fs.readFileSync('CHANGELOG.md', 'utf8');
-  const today = new Date().toISOString().split('T')[0];
-  const newSection = `\n## [${newVersion}] - ${today}\n\n### ${bump.charAt(0).toUpperCase() + bump.slice(1)}\n- Automated release via local SemVer tooling.\n`;
+  const latestCommitMsg = run('git log -1 --pretty=%s');
+  const newSection = `\n## [${newVersion}] - ${today}\n\n### ${bump.charAt(0).toUpperCase() + bump.slice(1)}\n- ${latestCommitMsg}\n`;
   
-  // Try to find the [Unreleased] section or add to top
   if (changelog.includes('## [Unreleased]')) {
     changelog = changelog.replace('## [Unreleased]', `## [Unreleased]\n\n${newSection.trim()}`);
   } else {
     changelog = changelog + '\n' + newSection;
   }
   fs.writeFileSync('CHANGELOG.md', changelog);
-  console.log(`✅ Updated CHANGELOG.md with ${newVersion}`);
+  console.log(`✅ Updated CHANGELOG.md with ${newVersion}: "${latestCommitMsg}"`);
 } catch (e) {
   console.error("Failed to update CHANGELOG.md", e.message);
 }
@@ -63,12 +63,24 @@ try {
 // Update AGENTS.md header
 try {
   let agents = fs.readFileSync('AGENTS.md', 'utf8');
-  // Handle both header [v1.3.0-hardening] and description v1.3.0-hardening
   agents = agents.replace(/v\d+\.\d+\.\d+-hardening/g, `${newVersion}-hardening`);
   fs.writeFileSync('AGENTS.md', agents);
   console.log(`✅ Updated AGENTS.md to ${newVersion}`);
 } catch (e) {
   console.error("Failed to update AGENTS.md", e.message);
+}
+
+// Update README.md header (badge or footer)
+try {
+  let readme = fs.readFileSync('README.md', 'utf8');
+  // Update badge if exists or footer date
+  const updatedDate = new Date().toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  readme = readme.replace(/Updated-.*-brightgreen/g, `Updated-${newVersion}-brightgreen`);
+  readme = readme.replace(/Last updated: .* ·/g, `Last updated: ${today} ·`);
+  fs.writeFileSync('README.md', readme);
+  console.log(`✅ Updated README.md to ${newVersion}`);
+} catch (e) {
+  console.error("Failed to update README.md", e.message);
 }
 
 // Create annotated tag
