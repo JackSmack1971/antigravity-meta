@@ -21,6 +21,15 @@
             "command": "bash .agents/hooks/gsd-session-state.sh"
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .agents/hooks/planning-with-files-session-start.sh",
+            "timeout": 10
+          }
+        ]
       }
     ],
     "AfterTool": [
@@ -40,6 +49,16 @@
           {
             "type": "command",
             "command": "bash .agents/hooks/gsd-phase-boundary.sh",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .agents/hooks/planning-with-files-after-tool.sh",
             "timeout": 5
           }
         ]
@@ -83,6 +102,38 @@
             "type": "command",
             "command": "bash .agents/hooks/gsd-validate-commit.sh",
             "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|Bash|Read|Glob|Grep",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .agents/hooks/planning-with-files-before-tool.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .agents/hooks/planning-with-files-user-prompt.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .agents/hooks/planning-with-files-stop.sh",
+            "timeout": 10
           }
         ]
       }

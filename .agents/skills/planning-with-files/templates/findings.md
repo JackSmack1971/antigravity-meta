@@ -1,95 +1,64 @@
 # Findings & Decisions
-<!-- 
-  WHAT: Your knowledge base for the task. Stores everything you discover and decide.
-  WHY: Context windows are limited. This file is your "external memory" - persistent and unlimited.
-  WHEN: Update after ANY discovery, especially after 2 view/browser/search operations (2-Action Rule).
+<!--
+  GSD INTEGRATION NOTE:
+  This file feeds state.md. After updating this file, add a pointer in state.md:
+    "Research context: See findings.md"
+  Do NOT replace state.md with this file — state.md holds GSD runtime state,
+  findings.md holds research/discovery content.
 -->
 
+## state.md Sync Status
+<!-- Keep state.md informed about key findings. Update this section when state.md is synced. -->
+- **Last synced to state.md:** [timestamp or "not yet"]
+- **state.md pointer added:** [ ] Yes / [ ] No
+
 ## Requirements
-<!-- 
-  WHAT: What the user asked for, broken down into specific requirements.
-  WHY: Keeps requirements visible so you don't forget what you're building.
-  WHEN: Fill this in during Phase 1 (Requirements & Discovery).
-  EXAMPLE:
-    - Command-line interface
-    - Add tasks
-    - List all tasks
-    - Delete tasks
-    - Python implementation
--->
-<!-- Captured from user request -->
+<!-- Captured from SPEC.md and user requests. The source of truth for what we're building. -->
+<!-- Cross-reference with SPEC.md acceptance criteria -->
+-
+
+## Spec Analysis
+<!-- Key insights from reading SPEC.md. Ambiguities, constraints, dependencies. -->
 -
 
 ## Research Findings
-<!-- 
-  WHAT: Key discoveries from web searches, documentation reading, or exploration.
-  WHY: Multimodal content (images, browser results) doesn't persist. Write it down immediately.
-  WHEN: After EVERY 2 view/browser/search operations, update this section (2-Action Rule).
-  EXAMPLE:
-    - Python's argparse module supports subcommands for clean CLI design
-    - JSON module handles file persistence easily
-    - Standard pattern: python script.py <command> [args]
+<!--
+  Key discoveries from web searches, documentation reading, or codebase exploration.
+  CRITICAL: Update after EVERY 2 view/browser/search operations (2-Action Rule).
 -->
-<!-- Key discoveries during exploration -->
 -
 
 ## Technical Decisions
-<!-- 
-  WHAT: Architecture and implementation choices you've made, with reasoning.
-  WHY: You'll forget why you chose a technology or approach. This table preserves that knowledge.
-  WHEN: Update whenever you make a significant technical choice.
-  EXAMPLE:
-    | Use JSON for storage | Simple, human-readable, built-in Python support |
-    | argparse with subcommands | Clean CLI: python todo.py add "task" |
--->
-<!-- Decisions made with rationale -->
-| Decision | Rationale |
-|----------|-----------|
-|          |           |
+<!-- Architecture and implementation choices with reasoning. -->
+<!-- Cross-check: do these conflict with .agents/rules/ constraints? -->
+| Decision | Rationale | Conflicts with rules? |
+|----------|-----------|-----------------------|
+|          |           | No                    |
+
+## Security Considerations
+<!-- From security-mandate.md perspective. Flag any security-relevant findings. -->
+| Finding | Risk Level | Mitigation |
+|---------|------------|------------|
+|         |            |            |
 
 ## Issues Encountered
-<!-- 
-  WHAT: Problems you ran into and how you solved them.
-  WHY: Similar to errors in task_plan.md, but focused on broader issues (not just code errors).
-  WHEN: Document when you encounter blockers or unexpected challenges.
-  EXAMPLE:
-    | Empty file causes JSONDecodeError | Added explicit empty file check before json.load() |
--->
-<!-- Errors and how they were resolved -->
-| Issue | Resolution |
-|-------|------------|
-|       |            |
+<!-- Problems encountered and how resolved. Broader than just code errors. -->
+| Issue | Resolution | GSD Phase |
+|-------|------------|-----------|
+|       |            |           |
 
 ## Resources
-<!-- 
-  WHAT: URLs, file paths, API references, documentation links you've found useful.
-  WHY: Easy reference for later. Don't lose important links in context.
-  WHEN: Add as you discover useful resources.
-  EXAMPLE:
-    - Python argparse docs: https://docs.python.org/3/library/argparse.html
-    - Project structure: src/main.py, src/utils.py
--->
-<!-- URLs, file paths, API references -->
+<!-- URLs, file paths, API references, documentation links. -->
 -
 
 ## Visual/Browser Findings
-<!-- 
-  WHAT: Information you learned from viewing images, PDFs, or browser results.
-  WHY: CRITICAL - Visual/multimodal content doesn't persist in context. Must be captured as text.
-  WHEN: IMMEDIATELY after viewing images or browser results. Don't wait!
-  EXAMPLE:
-    - Screenshot shows login form has email and password fields
-    - Browser shows API returns JSON with "status" and "data" keys
+<!--
+  CRITICAL: Information learned from images, PDFs, or browser results.
+  Visual/multimodal content does NOT persist in context — capture as text immediately.
+  Update IMMEDIATELY after viewing images or browser results. Do NOT wait.
 -->
-<!-- CRITICAL: Update after every 2 view/browser operations -->
-<!-- Multimodal content must be captured as text immediately -->
 -
 
 ---
-<!-- 
-  REMINDER: The 2-Action Rule
-  After every 2 view/browser/search operations, you MUST update this file.
-  This prevents visual information from being lost when context resets.
--->
-*Update this file after every 2 view/browser/search operations*
-*This prevents visual information from being lost*
+*Update after every 2 view/browser/search operations (2-Action Rule)*
+*After updating, add/refresh pointer in state.md: "Research context: See findings.md"*
