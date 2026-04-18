@@ -1,6 +1,6 @@
-# AGENTS.md: Hybrid Antigravity Architecture [v1.6.0-hardening]
+# AGENTS.md: Hybrid Antigravity Architecture [v1.6.1-hardening]
 
-**Hybrid System Configuration v1.6.0-hardening — synchronized with gsd-with-persistent-planning.md v1.3.0**
+**Hybrid System Configuration v1.6.1-hardening — synchronized with gsd-with-persistent-planning.md v1.3.0**
 This document serves as the high-level summary and cross-tool master rule of the hybrid Antigravity structure.
 
 ### Agents & Skills Directory

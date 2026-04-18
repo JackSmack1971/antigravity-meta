@@ -7,6 +7,11 @@ and this project adheres to [Conventional Commits](https://www.conventionalcommi
 
 ## [Unreleased]
 
+## [v1.6.1] - 2026-04-18
+
+### Patch
+- fix(audit): correct portability URIs and missing metadata
+
 ## [v1.6.0] - 2026-04-18
 
 ### Minor

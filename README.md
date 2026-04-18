@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/Skills-48%20Curated-blue)](docs/SKILLS-CATALOG.md)
 [![IDE](https://img.shields.io/badge/IDE-Google%20Antigravity-4285F4?logo=google)](https://antigravity.google)
-[![Updated](https://img.shields.io/badge/Updated-v1.6.0-brightgreen)](docs/CHANGELOG.md)
+[![Updated](https://img.shields.io/badge/Updated-v1.6.1-brightgreen)](docs/CHANGELOG.md)
 [![BMAD](https://img.shields.io/badge/Method-BMAD%20Agile-orange)](docs/BMAD-CHEATSHEET.md)
 
 The cleanest, most powerful drop-in agentic development workspace for **Google Antigravity IDE** — pre-configured with the exact hybrid architecture used by experienced Antigravity power users in April 2026.
