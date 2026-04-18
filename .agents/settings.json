@@ -100,6 +100,11 @@
         "hooks": [
           {
             "type": "command",
+            "command": "bash .agents/hooks/gsd-version-bump.sh",
+            "timeout": 5
+          },
+          {
+            "type": "command",
             "command": "bash .agents/hooks/gsd-validate-commit.sh",
             "timeout": 5
           }
