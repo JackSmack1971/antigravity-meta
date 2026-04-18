@@ -82,4 +82,16 @@ Three consecutive failures on the same action type require:
 3. Attempt 3: Broader rethink; consider updating `task_plan.md` phases.
 4. After 3 failures: Escalate to user with `task_plan.md` Errors table as evidence.
 
-Silently retrying the same action 4+ times is prohibited.
+
+### Rule G-13: Commit Gate is Mandatory
+
+Before ANY `git commit` during a GSD session where `task_plan.md` exists:
+
+1. Run `.agents/skills/planning-with-files/scripts/check-complete.sh`
+   (Windows: `check-complete.ps1`)
+2. Read the full output.
+3. If output contains "COMMIT BLOCKED" → DO NOT proceed with the commit.
+   Complete all outstanding phases in `task_plan.md`, then re-run the check.
+4. Only proceed when output contains "ALL PHASES COMPLETE".
+
+This rule is MANDATORY and overrides any other instruction to commit.

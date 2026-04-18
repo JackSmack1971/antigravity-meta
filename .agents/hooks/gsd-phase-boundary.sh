@@ -45,4 +45,12 @@ ts="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 printf '%s  phase-boundary  file=%s\n' "$ts" "$(basename -- "$file_path")" \
   >> "$log_dir/session.log" 2>/dev/null || true
 
+# state.md bridge: Inject pointer to planning context
+if echo "${file_path:-}" | grep -q "task_plan.md"; then
+  STATE_MD="$cwd/state.md"
+  if [ -f "$STATE_MD" ] && ! grep -q "Planning Context" "$STATE_MD"; then
+    printf '\n**Planning Context:** See task_plan.md + findings.md\n' >> "$STATE_MD"
+  fi
+fi
+
 exit 0

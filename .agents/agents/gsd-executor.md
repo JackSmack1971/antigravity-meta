@@ -15,6 +15,8 @@ Your job: Execute the plan completely, commit each task, create SUMMARY.md, upda
 
 **CRITICAL: Mandatory Initial Read**
 If the prompt contains a `<files_to_read>` block, you MUST use the `Read` tool to load every file listed there before performing any other actions. This is your primary context.
+
+**Persistent Planning Context:** Regardless of the `<files_to_read>` content, you MUST proactively check for and read `task_plan.md`, `findings.md`, and `progress.md` if they exist in the workspace to ensure goal persistence and session recovery.
 </role>
 
 <mcp_tool_usage>

@@ -113,12 +113,25 @@ process.stdin.on('end', () => {
       } catch (e) {}
     }
 
+    // Planning phase detection
+    let planningPhase = '';
+    const planPath = path.join(dir, 'task_plan.md');
+    if (fs.existsSync(planPath)) {
+      try {
+        const content = fs.readFileSync(planPath, 'utf8');
+        const activeMatch = content.match(/## (Phase .*)\r?\n\*\*Status:\*\* in_progress/);
+        if (activeMatch) {
+          planningPhase = ` \x1b[2m[\x1b[0;36m${activeMatch[1].split(':')[0]}\x1b[0;2m]\x1b[0m`;
+        }
+      } catch (e) {}
+    }
+
     // Output
     const dirname = path.basename(dir);
     if (task) {
-      process.stdout.write(`${gsdUpdate}\x1b[2m${model}\x1b[0m │ \x1b[1m${task}\x1b[0m │ \x1b[2m${dirname}\x1b[0m${ctx}`);
+      process.stdout.write(`${gsdUpdate}\x1b[2m${model}\x1b[0m │ \x1b[1m${task}\x1b[0m${planningPhase} │ \x1b[2m${dirname}\x1b[0m${ctx}`);
     } else {
-      process.stdout.write(`${gsdUpdate}\x1b[2m${model}\x1b[0m │ \x1b[2m${dirname}\x1b[0m${ctx}`);
+      process.stdout.write(`${gsdUpdate}\x1b[2m${model}\x1b[0m │ \x1b[2m${dirname}\x1b[0m${planningPhase}${ctx}`);
     }
   } catch (e) {
     // Silent fail - don't break statusline on parse errors
