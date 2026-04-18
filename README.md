@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/Skills-48%20Curated-blue)](docs/SKILLS-CATALOG.md)
 [![IDE](https://img.shields.io/badge/IDE-Google%20Antigravity-4285F4?logo=google)](https://antigravity.google)
-[![Updated](https://img.shields.io/badge/Updated-April%202026-brightgreen)](docs/CHANGELOG.md)
+[![Updated](https://img.shields.io/badge/Updated-v1.5.1-brightgreen)](docs/CHANGELOG.md)
 [![BMAD](https://img.shields.io/badge/Method-BMAD%20Agile-orange)](docs/BMAD-CHEATSHEET.md)
 
 The cleanest, most powerful drop-in agentic development workspace for **Google Antigravity IDE** — pre-configured with the exact hybrid architecture used by experienced Antigravity power users in April 2026.
@@ -347,8 +347,8 @@ This framework is IDE-agnostic at the skill level but optimized for the followin
 Keep each layer current independently:
 
 ```bash
-# Update the Awesome-Skills Pack to get new skills
-npx antigravity-awesome-skills --update
+# Update the Curated Skills Pack
+npx antigravity-curated-skills --update
 
 # Update GSD workflow engine
 npx get-shit-done-cc@latest --tools antigravity
@@ -375,7 +375,7 @@ npx -y bmad-method install --tools antigravity --yes
 
 ### Skills not found (`skill not recognized` error)
 
-**Cause:** Awesome-Skills Pack may be outdated or the `.agents/skills/` folder is empty.  
+**Cause:** Curated Skills Pack may be outdated or the `.agents/skills/` folder is empty.  
 **Fix:** Re-run the pruning script to restore the curated 48-pattern set.
 
 ### `/pm` or `/architect` not doing anything
@@ -440,4 +440,4 @@ Made with ❤️ for the ultimate vibe-free, agent-first development experience.
 
 ---
 
-*Last updated: April 17, 2026 · [MIT License](LICENSE) · Project: Antigravity Hybrid Workspace (GSD + BMAD + Persistent Planning)*
+*Last updated: 2026-04-18 · Project: Antigravity Hybrid Workspace (GSD + BMAD + Persistent Planning)*
