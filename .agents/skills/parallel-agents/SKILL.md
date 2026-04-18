@@ -93,25 +93,27 @@ Agents: security-auditor → penetration-tester → synthesis
 
 ## Available Agents
 
-| Agent | Expertise | Trigger Phrases |
-|-------|-----------|-----------------|
-| `orchestrator` | Coordination | "comprehensive", "multi-perspective" |
-| `security-auditor` | Security | "security", "auth", "vulnerabilities" |
-| `penetration-tester` | Security Testing | "pentest", "red team", "exploit" |
-| `backend-specialist` | Backend | "API", "server", "Node.js", "Express" |
-| `frontend-specialist` | Frontend | "React", "UI", "components", "Next.js" |
-| `test-engineer` | Testing | "tests", "coverage", "TDD" |
-| `devops-engineer` | DevOps | "deploy", "CI/CD", "infrastructure" |
-| `database-architect` | Database | "schema", "Prisma", "migrations" |
-| `mobile-developer` | Mobile | "React Native", "Flutter", "mobile" |
-| `api-designer` | API Design | "REST", "GraphQL", "OpenAPI" |
-| `debugger` | Debugging | "bug", "error", "not working" |
-| `explorer-agent` | Discovery | "explore", "map", "structure" |
-| `documentation-writer` | Documentation | "write docs", "create README", "generate API docs" |
-| `performance-optimizer` | Performance | "slow", "optimize", "profiling" |
-| `project-planner` | Planning | "plan", "roadmap", "milestones" |
-| `seo-specialist` | SEO | "SEO", "meta tags", "search ranking" |
-| `game-developer` | Game Development | "game", "Unity", "Godot", "Phaser" |
+| Agent | Expertise | Trigger Phrases | Status |
+|-------|-----------|-----------------|--------|
+| `api-security-best-practices` | Security | "security", "auth", "vulnerabilities" | Active (replaces security-auditor) |
+| `backend-architect` | Backend | "API", "server", "Node.js", "Express" | Active |
+| `database-architect` | Database | "schema", "Prisma", "migrations" | Active |
+| `orchestrator` | Coordination | "comprehensive", "multi-perspective" | [PLANNED] Deprecating 2026-12-01 |
+| `security-auditor` | Security | "security", "auth" | [DEPRECATED] use api-security-best-practices |
+| `penetration-tester` | Security Testing | "pentest", "red team", "exploit" | [PLANNED] Deprecating 2026-12-01 |
+| `backend-specialist` | Backend | "API", "server" | [PLANNED] Deprecating 2026-12-01 |
+| `frontend-specialist` | Frontend | "React", "UI" | [PLANNED] Deprecating 2026-12-01 |
+| `test-engineer` | Testing | "tests", "coverage", "TDD" | [PLANNED] Deprecating 2026-12-01 |
+| `devops-engineer` | DevOps | "deploy", "CI/CD", "infrastructure" | [PLANNED] Deprecating 2026-12-01 |
+| `mobile-developer` | Mobile | "React Native", "Flutter", "mobile" | [PLANNED] Deprecating 2026-12-01 |
+| `api-designer` | API Design | "REST", "GraphQL", "OpenAPI" | [PLANNED] Deprecating 2026-12-01 |
+| `debugger` | Debugging | "bug", "error", "not working" | [PLANNED] Deprecating 2026-12-01 |
+| `explorer-agent` | Discovery | "explore", "map", "structure" | [PLANNED] Deprecating 2026-12-01 |
+| `documentation-writer` | Documentation | "write docs", "create README" | [PLANNED] Deprecating 2026-12-01 |
+| `performance-optimizer` | Performance | "slow", "optimize", "profiling" | [PLANNED] Deprecating 2026-12-01 |
+| `project-planner` | Planning | "plan", "roadmap", "milestones" | [PLANNED] Deprecating 2026-12-01 |
+| `seo-specialist` | SEO | "SEO", "meta tags", "search ranking" | [PLANNED] Deprecating 2026-12-01 |
+| `game-developer` | Game Development | "game", "Unity", "Godot", "Phaser" | [PLANNED] Deprecating 2026-12-01 |
 
 ---
 

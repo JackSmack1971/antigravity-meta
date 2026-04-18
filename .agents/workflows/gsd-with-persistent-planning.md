@@ -83,6 +83,7 @@ SPEC.md ──► task_plan.md ──► Execute ──► Verify ──► Comm
 4. On any error → log in `task_plan.md` Errors table AND `progress.md` Error Log.
 5. Apply 3-Strike Error Protocol (never repeat the same failing action).
 6. `code-quality-git-testing.md` enforced: no shortcuts on quality gates.
+7. **Phase Synchronicity Latch**: Every 5 tool calls, check the active phase in `task_plan.md` vs true implementation state. If drift is detected, align the plan immediately.
 
 **Checkpoint before advancing to Verify phase:**
 - [ ] `task_plan.md` Phase 3 status → `complete`

@@ -14,7 +14,9 @@ description: Autonomously scans and interprets the repository architecture again
    Every file in `.agents/rules/*.md` MUST remain plain Markdown.
    // if
    Flag as a violation if any rule file starts with `---` (YAML frontmatter). Do NOT auto-fix rules; preserve original formatting.
-5. **Architectural Analysis:** Analyze all workflows in `.agents/workflows/`, rules in `.agents/rules/`, and skills in `.agents/skills/`. Detect missing YAML frontmatter in workflows/skills or violations of the 12,000-character limit.
+5. **URI Standard Check:**
+   Every pointer in `SKILL.md` to local resources MUST use `file:///` absolute URIs. Flag relative paths (e.g., `./resources/` or `resources/`) as violations and auto-fix.
+6. **Architectural Analysis:** Analyze all workflows in `.agents/workflows/`, rules in `.agents/rules/`, and skills in `.agents/skills/`. Detect missing YAML frontmatter in workflows/skills or violations of the 12,000-character limit.
 6. **Correction and Reporting:**  
    // parallel  
 7. Fix any trivial formatting, naming conventions, or structural issues.  

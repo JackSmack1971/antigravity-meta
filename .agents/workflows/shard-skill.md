@@ -16,7 +16,7 @@ description: Shards an oversized SKILL.md into modular Level 2/3 resources while
    // turbo
    - Create resources/ subfolder if missing  
    - Extract each large section into resources/<section-name>.md  
-   - Replace original section with a concise pointer: "See resources/<section-name>.md"
+   - Replace original section with a concise absolute pointer: "See [resources/<section-name>.md](file:///[root]/.agents/skills/$1/resources/<section-name>.md)"
 
 4. **Update SKILL.md**  
    Add a new “Resources” table-of-contents section at the top.

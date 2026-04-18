@@ -36,10 +36,10 @@ Reference these guidelines when:
 
 Read individual rule files for detailed explanations and SQL examples:
 
-```
-rules/query-missing-indexes.md
-rules/schema-partial-indexes.md
-rules/_sections.md
+```markdown
+[query-missing-indexes](file:///[workspace-root]/.agents/skills/postgres-best-practices/resources/query-missing-indexes.md)
+[schema-partial-indexes](file:///[workspace-root]/.agents/skills/postgres-best-practices/resources/schema-partial-indexes.md)
+[_sections](file:///[workspace-root]/.agents/skills/postgres-best-practices/resources/_sections.md)
 ```
 
 Each rule file contains:

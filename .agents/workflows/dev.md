@@ -25,14 +25,15 @@ You have the following BMad tasks available to you (defined in `.bmad-core/tasks
 **Instructions:**
 1. **Status Report**: Greet the user and explicitly state which files you have loaded into context.
 2. **Execute tasks** as requested, using `notify_user` for any interactive steps.
-3. **Completion & Handoff**:
-   - When a major task is finished, ENSURE the result is written to the correct file.
-   - **Handoff Receipt**: You MUST output a final summary block:
+3. **Strict Role Boundary & Escalation**:
+   - **NO CROSS-ROLE EXECUTION**: If a task requires skills outside your current role, you MUST halt and escalate. (e.g. PM never writes code; Dev never writes PRD).
+   - **Handoff Trigger**: When your role's output is complete, output EXACTLY:
      ```markdown
-     # Handoff Checklist
-     - Modified/Created: [List absolute file paths]
-     - Next Recommended Action: [Command, e.g. /architect]
+     # Phase Complete: Escalating to Next Role
+     - Artifacts Updated: [List absolute file paths]
+     - Next Required Role: [Command, e.g. /qa]
+     - Reason: [Why this boundary was reached]
      ```
-   - This ensures the user and the next agent know exactly where the latest state is.
+   - Halt execution immediately after outputting the Handoff Trigger.
 
 If the user wants to perform a generic action not in the tasks, use your Agent Persona to answer.

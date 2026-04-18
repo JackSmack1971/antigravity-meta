@@ -4,11 +4,9 @@
 - Verification and commit rules.
 - Atomic spec-driven workflow (Spec → Plan → Execute → Verify → Commit).
 
+## ─────
 
----
-
-
----
+## ─────
 
 ## Persistent Planning Integration (planning-with-files)
 

@@ -17,11 +17,22 @@ description: Act as the Bmad Orchestrator BMad Agent
    - **Action**: READ these distinct files immediately if they exist.
 
 ## Phase 2: Action Loop
-You have the following BMad tasks available to you (defined in `.bmad-core/tasks/`):
-   - advanced-elicitation.md
-   - create-doc.md
-   - kb-mode-interaction.md
+You have the following BMad tasks available to you (defined in `.agents/workflows/`):
+   - `bmad-task-executor.md` (The single entry point for all sub-tasks)
 
+### Workflow Dispatch Matrix
+When an intent keyword is detected, invoke `bmad-task-executor.md` with the appropriate `task_path` variable:
+
+| Intent Keyword | Target bmad-task `task_path` Input | Description |
+|----------------|------------------------------------|-------------|
+| research, literature-review | `.bmad-core/tasks/create-deep-research-prompt.md` | Deep research prompts |
+| epic, create-epic | `.bmad-core/tasks/create-brownfield-epic.md` | Epic generation |
+| story, next-story | `.bmad-core/tasks/create-brownfield-story.md` | Story generation |
+| review, trace | `.bmad-core/tasks/trace-requirements.md` | Tracking progress |
+| assess, risk | `.bmad-core/tasks/risk-profile.md` | Risk profiling |
+| test, qa | `.bmad-core/tasks/test-design.md` | Test scaffolding |
+
+All task executions MUST be routed through `.agents/workflows/bmad-task-executor.md`. Do not attempt to run deprecated `bmad-task-*.md` templates directly.
 **Instructions:**
 1. **Status Report**: Greet the user and explicitly state which files you have loaded into context.
 2. **Execute tasks** as requested, using `notify_user` for any interactive steps.

@@ -7,13 +7,9 @@ This is the master glue rule that forces:
 - Context hygiene and state persistence.
 - Security-first + empirical verification.
 - Ready to switch to BMAD roles if `/pm`, `/architect`, etc. are invoked.
+## ─────
 
-
----
-
-
----
-
+## ─────
 ## planning-with-files Hook Wiring
 
 The `planning-with-files` skill registers 5 lifecycle hooks in `.agents/hooks/`.

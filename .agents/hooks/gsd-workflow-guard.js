@@ -40,7 +40,9 @@ process.stdin.on('end', () => {
     const filePath = data.tool_input?.file_path || data.tool_input?.path || '';
 
     // Allow edits to .planning/ files (GSD state management)
-    if (filePath.includes('.planning/') || filePath.includes('.planning\\')) {
+    const resolvedPath = path.resolve(filePath);
+    const planningDir = path.resolve(cwd, '.planning');
+    if (resolvedPath.startsWith(planningDir + path.sep)) {
       process.exit(0);
     }
 
@@ -78,7 +80,8 @@ process.stdin.on('end', () => {
     // Emit the event name matching the active runtime:
     //   Gemini / Antigravity  -> "BeforeTool"
     //   Claude Code (default) -> "PreToolUse"
-    const preToolEvent = process.env.GEMINI_API_KEY ? 'BeforeTool' : 'PreToolUse';
+    const isAntigravity = process.env.ANTIGRAVITY_RUNTIME === 'true' || process.env.GEMINI_API_KEY;
+    const preToolEvent = isAntigravity ? 'BeforeTool' : 'PreToolUse';
     const output = {
       hookSpecificOutput: {
         hookEventName: preToolEvent,

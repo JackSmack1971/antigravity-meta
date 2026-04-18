@@ -1,4 +1,4 @@
-# AGENTS.md: Hybrid Antigravity Architecture
+# AGENTS.md: Hybrid Antigravity Architecture [v1.3.0-hardening]
 
 **Hybrid System Configuration 2026**
 This document serves as the high-level summary and cross-tool master rule of the hybrid Antigravity structure.
@@ -16,3 +16,11 @@ GSD layered on top guarantees the atomic Spec → Plan → Execute → Verify �
 5. `strong-reasoner-planner.md` - Reason and formulate plans atomically
 6. `code-quality-git-testing.md` - Clean code with verified tests
 7. `skill-governance.md` - Mandatory sharding and character limit rules
+
+### Conflict Resolution Precedence
+If conflict arises between sources, the absolute order of precedence is:
+1. `AGENTS.md` (This file)
+2. `.agents/rules/*`
+3. `.agents/workflows/*`
+4. `.agents/skills/*`
+5. External knowledge / LLM pre-training
