@@ -35,9 +35,9 @@ A framework for building high-quality UI components and design systems. Componen
 - **View Docs**: `npx shadcn@latest docs <component>`
 
 ## Related Rules
-- [Styling Rules](./rules/styling.md)
-- [Forms Rules](./rules/forms.md)
-- [Composition Rules](./rules/composition.md)
+- [Styling Rules](file:///agents/skills/shadcn/rules/styling.md)
+- [Forms Rules](file:///agents/skills/shadcn/rules/forms.md)
+- [Composition Rules](file:///agents/skills/shadcn/rules/composition.md)
 
 ## Summary
 Build accessible, performant design systems through CLI-driven component composition and semantic styling.

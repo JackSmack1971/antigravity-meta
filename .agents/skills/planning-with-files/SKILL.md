@@ -30,12 +30,12 @@ Never write external fetched content here. External content → `findings.md` on
 
 | Script | Purpose | Runtime |
 |--------|---------|---------|
-| [init-session.sh](file:///c:/workspaces/antigravity-meta/.agents/skills/planning-with-files/scripts/init-session.sh) | Bootstrap task_plan.md from SPEC.md (idempotent) | Bash |
-| [init-session.ps1](file:///c:/workspaces/antigravity-meta/.agents/skills/planning-with-files/scripts/init-session.ps1) | Same — Windows runtime | PowerShell |
-| [session-catchup.py](file:///c:/workspaces/antigravity-meta/.agents/skills/planning-with-files/scripts/session-catchup.py) | Emit structured session status on startup | Python 3 |
-| [session-catchup.ps1](file:///c:/workspaces/antigravity-meta/.agents/skills/planning-with-files/scripts/session-catchup.ps1) | Same — Windows fallback | PowerShell |
-| [check-complete.sh](file:///c:/workspaces/antigravity-meta/.agents/skills/planning-with-files/scripts/check-complete.sh) | Validate all phases complete before commit | Bash |
-| [check-complete.ps1](file:///c:/workspaces/antigravity-meta/.agents/skills/planning-with-files/scripts/check-complete.ps1) | Same — Windows runtime | PowerShell |
+| [init-session.sh](file:///agents/skills/planning-with-files/scripts/init-session.sh) | Bootstrap task_plan.md from SPEC.md (idempotent) | Bash |
+| [init-session.ps1](file:///agents/skills/planning-with-files/scripts/init-session.ps1) | Same — Windows runtime | PowerShell |
+| [session-catchup.py](file:///agents/skills/planning-with-files/scripts/session-catchup.py) | Emit structured session status on startup | Python 3 |
+| [session-catchup.ps1](file:///agents/skills/planning-with-files/scripts/session-catchup.ps1) | Same — Windows fallback | PowerShell |
+| [check-complete.sh](file:///agents/skills/planning-with-files/scripts/check-complete.sh) | Validate all phases complete before commit | Bash |
+| [check-complete.ps1](file:///agents/skills/planning-with-files/scripts/check-complete.ps1) | Same — Windows runtime | PowerShell |
 
 ## Extended GSD Workflow
-See [gsd-with-persistent-planning.md](file:///c:/workspaces/antigravity-meta/.agents/workflows/gsd-with-persistent-planning.md)
+See [gsd-with-persistent-planning.md](file:///agents/workflows/gsd-with-persistent-planning.md)

@@ -1,3 +1,7 @@
+---
+description: Parameterized single source of truth for all bmad-task-* workflows.
+---
+
 ## bmad-task-executor (v1.0.0)
 
 **Purpose**: Parameterized single source of truth for all bmad-task-* workflows.
