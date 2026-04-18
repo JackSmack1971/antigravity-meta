@@ -1,11 +1,12 @@
-# SPEC.md: PM Intelligent Changelog Generation
+# SPEC.md: Local-First Semantic Versioning System
 
-**Goal**: Execute a complete GSD-with-persistent-planning loop acting as /pm to compile an intelligent `CHANGELOG.md` from git logging parameters.
+**Goal**: Execute the semantic versioning implementation plan (v1.4.0) to provide deterministic version management for the Antigravity core.
 
 **Requirements**:
-1. Output strict `Keep a Changelog v1.1.0` standard structuring.
-2. Distil literal git queries into comprehensive bullets clustered by standard action markers (`Added`, `Changed`, `Fixed`, `Deprecated`, `Removed`, `Security`, `Performance`, `Other`).
-3. Set the highest blocks to `[Unreleased]` and `[1.3.0-hardening]`. Note breaking changes explicitly if applicable.
-4. Keep the historical mappings exactly untouched beneath the injection line.
-5. Provide a large `task_plan.md` to definitively trigger the `R-P6` preservation prune prior to completion.
-6. Verify `/self-audit` yields 0 critical hits immediately preceding the final commit phase.
+1. **[Rule:SemVerEnforcer]**: Enforce SemVer string integrity in `code-quality-git-testing.md`.
+2. **[Workflow:ReleaseOrchestrator]**: Register `/release` intent in `orchestrator.md`.
+3. **[Skill:SemVerCapability]**: Deploy `semantic-versioning/SKILL.md` and `RELEASE.md`.
+4. **[Engine:SemVerLogic]**: Deploy `semantic-versioning.js` to parse commits and automate `CHANGELOG.md`, `AGENTS.md`, and `README.md`.
+5. **[Hook:VersionBump]**: Deploy dual-platform `.sh` and `.ps1` hooks.
+6. **[Validation]**: Successful test release to `v1.4.0` with verified header sync across 3 files (`AGENTS.md`, `README.md`, `CHANGELOG.md`).
+7. **[Governance]**: `/self-audit` with 0 critical hits.
