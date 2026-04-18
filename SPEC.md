@@ -1,22 +1,11 @@
-# 🏷️ [Project / Task Name]
+# SPEC.md: PM Intelligent Changelog Generation
 
-**Date**: 2026-04-05
-**Author**: [Author Name]
+**Goal**: Execute a complete GSD-with-persistent-planning loop acting as /pm to compile an intelligent `CHANGELOG.md` from git logging parameters.
 
-## 🎯 Goal
-[Clearly state the primary objective and the *why* behind this task.]
-
-## ✅ Acceptance Criteria
-- [ ] Criterion 1
-- [ ] Criterion 2
-- [ ] Criterion 3
-
-## 🚧 Technical Constraints
-- [Any specific libraries, performance budgets, or limitations.]
-- [Architecture considerations, e.g., must use App Router, must be stateless.]
-
-## ❌ Out of Scope
-- [Explicitly list what should NOT be built or addressed during this task.]
-
-## 📚 References
-- [Links to designs, PRDs, API docs, or similar.]
+**Requirements**:
+1. Output strict `Keep a Changelog v1.1.0` standard structuring.
+2. Distil literal git queries into comprehensive bullets clustered by standard action markers (`Added`, `Changed`, `Fixed`, `Deprecated`, `Removed`, `Security`, `Performance`, `Other`).
+3. Set the highest blocks to `[Unreleased]` and `[1.3.0-hardening]`. Note breaking changes explicitly if applicable.
+4. Keep the historical mappings exactly untouched beneath the injection line.
+5. Provide a large `task_plan.md` to definitively trigger the `R-P6` preservation prune prior to completion.
+6. Verify `/self-audit` yields 0 critical hits immediately preceding the final commit phase.
